@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .main-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Распределение между контейнерами */
+    padding: 0 1%;  /* Отступы поткраям контейнера */
+    box-sizing: border-box;
+    margin-top: 1%; /* Отступ от верхней границы страницы */
+    
+  }
+  .inner-container {
+    margin: 2%; /* Отступы между контейнерами */
+    background-color: grey;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 300px; /* Фиксированная высота контейнера */
+    width: calc(33.33% - 4%); /* Ширина контейнера с учетом отступов */
+    position: relative; /* Добавлено для позиционирования */
+  }
+  .inner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* 70% высоты inner-container */
+    background-color: blue; /* Замените на ваше изображение или стиль */
+    border-top-left-radius: 15px; /* закругляем границы сверху */
+    border-top-right-radius: 15px; /* закругляем границы сверху */
+  }
+  .inner-description {
+    position: absolute;
+    top: 70%; /* 70% отступ сверху для описания */
+    left: 0;
+    width: 100%;
+    height: 10%; /* 10% высоты inner-container */
+    display: flex; /* Используем flex для выравнивания по центру */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    background-color: #f0f0f0; /* Цвет описания */
+    box-sizing: border-box;
+  }
+  .inner-price {
+    position: absolute;
+    top: 80%; /* 80% отступ сверху для описания */
+    left: 25%;
+    width: 75%;
+    height: 10%; /* 10% высоты inner-container */
+    display: flex; /* Используем flex для выравнивания по центру */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    background-color: yellow; /* Цвет описания */
+    box-sizing: border-box;
+  }
+  .inner-menu {
+    position: absolute;
+    top: 80%; /* 80% отступ сверху для описания */
+    left: 0;
+    width: 25%;
+    height: 10%; /* 10% высоты inner-container */
+    background-color: green; /* Цвет описания */
+    box-sizing: border-box;
+  }
+  .inner-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; /* 10% высоты inner-container */
+    display: flex; /* Используем flex для выравнивания по центру */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    background-color: #f0f0f0; /* Цвет кнопки */
+    box-sizing: border-box;
+  }
+  .button {
+    width: 100%; /* 75% от ширины inner-container */
+    height: 100%; /* 75% от высоты inner-button */
+    background-color: #007bff; /* Цвет кнопки */
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Абсолютное позиционирование внутри .inner-button */
+    top: 0; /* следующие 4 значения размещают кнопку внутри контейнера */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Центрирование кнопки внутри .inner-button */
+  }
+</style>
+<b:skin><![CDATA[]]></b:skin>
+</head>
+<body>
+  <b:section id='main' maxwidgets='1'>
+    <div class="main-container">
+      <div class="inner-container">
+        <div class="inner-image"></div>
+        <div class="inner-description">Описание 1</div>
+        <div class="inner-price">Цена:</div>
+        <div class="inner-menu"></div>
+        <div class="inner-button">
+          <button class="button">Кнопка</button>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="inner-image"></div>
+        <div class="inner-description">Описание 2</div>
+        <div class="inner-price">Цена:</div>
+        <div class="inner-menu">меню</div>
+        <div class="inner-button">
+          <button class="button">Кнопка</button>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="inner-image"></div>
+        <div class="inner-description">Описание 3</div>
+        <div class="inner-price">Цена:</div>
+        <div class="inner-menu"></div>
+        <div class="inner-button">
+          <button class="button">Кнопка</button>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="inner-image"></div>
+        <div class="inner-description">Описание 4</div>
+        <div class="inner-price">Цена:</div>
+        <div class="inner-menu"></div>
+        <div class="inner-button">
+          <button class="button">Кнопка</button>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="inner-image"></div>
+        <div class="inner-description">Описание 5</div>
+        <div class="inner-price">Цена:</div>
+        <div class="inner-menu"></div>
+        <div class="inner-button">
+          <button class="button">Кнопка</button>
+        </div>
+      </div>
+    </div>
+  </b:section>
+</body>
+</html>
