@@ -1,116 +1,139 @@
 body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 50px; /* Отступ для учета navbar */
-    }
-    .product {
-      width: calc(33.33% - 10px);
-      margin: 5px;
-      text-align: center;
-      position: relative;
-    }
-    .product-image {
-      width: 100%;
-    }
-    .product-name {
-      margin-top: 10px;
-    }
-    .product-price {
-      color: green;
-      margin-top: 5px;
-    }
-    .count-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #F55353;
-      color: white;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .quantity-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
-    .quantity-button {
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      width: 50%;
-      margin: 0 5px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .remove-button {
-      background-color: red;
-    }
-    .add-to-cart-button {
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      width: 100%;
-      margin: 0 auto;
-      display: block;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .cart-button {
-      background-color: #143F6B;
-      color: white;
-      border: none;
-      padding: 15px 50px;
-      cursor: pointer;
-      border-radius: 10px; /* округление углов*/
-      text-align: center;
-      /* margin: 0; */
-    }
-    .cart-button:hover {
-      background-color: #0E2D4E;
-    }
-    .cart-container {
-      display: flex;
-      background-color: orange;
-      /* justify-content: flex-end; */
-      align-items: center; /* Добавьте это для вертикального выравнивания */
-      padding: 5px;
-    }
-    .cart-popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
-    .cart-popup.show {
-      display: flex;
-    }
-    .cart-popup-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      max-height: 80%;
-      overflow-y: auto;
-    }
-    .cart-item {
-      margin-bottom: 10px;
-    }
+    --bg-color: var(--tg-theme-bg-color, #fff);
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    color: var(--tg-theme-text-color, #222);
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color-scheme: var(--tg-color-scheme);
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px; /* Отступ для учета navbar */
+}
+
+.product {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-name {
+    margin-top: 10px;
+}
+
+.product-price {
+    color: green;
+    margin-top: 5px;
+}
+
+.count-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #F55353;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.remove-button {
+    background-color: red;
+}
+
+.add-to-cart-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart-button {
+    background-color: #143F6B;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 10px; /* округление углов */
+    text-align: center;
+}
+
+.cart-button:hover {
+    background-color: #0E2D4E;
+}
+
+.cart-container {
+    display: flex;
+    background-color: orange;
+    /* justify-content: flex-end; */
+    align-items: center; /* Добавьте это для вертикального выравнивания */
+    padding: 5px;
+}
+
+.cart-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.cart-popup.show {
+    display: flex;
+}
+
+.cart-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
