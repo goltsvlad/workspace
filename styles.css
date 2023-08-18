@@ -1,8 +1,8 @@
 body {
-    --bg-color: var(--tg-theme-bg-color, #fff);
+    --bg-color: var(--tg-theme-bg-color);
     font-family: sans-serif;
     background-color: var(--bg-color);
-    color: var(--tg-theme-text-color, #222);
+    color: var(--tg-theme-text-color);
     font-size: 14px;
     margin: 0;
     padding: 0;
