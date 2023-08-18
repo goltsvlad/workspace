@@ -12,7 +12,7 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px; /* Отступ для учета navbar */
+    margin-top: 10px; /* Отступ для учета navbar */
 }
 
 .product {
@@ -40,7 +40,6 @@ body {
     top: 10px;
     right: 10px;
     background-color: #F55353;
-    color: white;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -74,7 +73,6 @@ body {
 
 .add-to-cart-button {
     background-color: orange;
-    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -87,7 +85,6 @@ body {
 
 .cart-button {
     background-color: #143F6B;
-    color: white;
     border: none;
     padding: 15px 50px;
     cursor: pointer;
