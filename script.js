@@ -1,4 +1,4 @@
-var tg = window.Telegram.WebApp;
+var tg = Telegram.WebApp;
 
 tg.expand();
 tg.MainButton.text = 'Оформить заказ';
