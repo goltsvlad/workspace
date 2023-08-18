@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <script expr:src='"https://telegram.org/js/telegram-web-app.js"' type='text/javascript'></script>
   <style type='text/css'>
     body {
       margin: 0;
@@ -143,25 +142,8 @@
 
     <script type='text/javascript'>
     // <![CDATA[
-    var tg = window.Telegram.WebApp;
-    tg.expand();
-    tg.MainButton.text = 'Оформить заказ';
-    tg.MainButton.textColor = '#F55353';
-    tg.MainButton.color = '#143F6B';
+    
 
-    // Скрытие кнопки MainButton при загрузке страницы
-    tg.MainButton.hide();
-
-    Telegram.WebApp.onEvent('mainButtonClicked', function() {
-      var cartData = cart.map(function(item) {
-        return item.name + ' (x' + item.count + ') ' + item.count * item.price + ' рублей';
-      }).join('\n');
-      var total = cart.reduce(function(sum, item) {
-        return sum + item.price * item.count;
-      }, 0);
-      var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' рублей.';
-      tg.sendData(data);
-    });
 
     var products = [
       { id: 1, name: "Товар 1", price: 100, image: "https://picsum.photos/200", count: 0 },
