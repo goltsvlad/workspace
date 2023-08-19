@@ -143,17 +143,9 @@ function toggleCartPopup() {
   tg.BackButton.show();
   var cartPopup = document.getElementById('cart-popup');
 
-  if (cartPopup.classList.contains('show')) {
-    cartPopup.classList.remove('show');
-    tg.MainButton.hide();
-  } else {
-    updateCartPopup();
-    cartPopup.classList.add('show');
-
-    if (cart.length > 0) {
-      tg.MainButton.show();
-    }
-  }
+  updateCartPopup();
+  cartPopup.classList.add('show');
+  tg.MainButton.setText("Підтвердити");
 }
 
 function closeCartPopup() {
