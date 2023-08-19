@@ -9,37 +9,37 @@ body {
     color-scheme: var(--tg-color-scheme);
 }
 
-.product-list {
+.product-list { /* главный контейнер товара */
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px; /* Отступ для учета navbar */
 }
 
-.product {
+.product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
     width: calc(33.33% - 10px);
     margin: 5px;
     text-align: center;
     position: relative;
 }
 
-.product-image {
+.product-image { /* картинка товара */
     width: 100%;
 }
 
-.product-name {
+.product-name { /* название товара */
     margin-top: 10px;
 }
 
-.product-price {
+.product-price { /* цена товара */
     color: green;
     margin-top: 5px;
 }
 
-.count-badge {
+.count-badge { /* значок количества на картинке */
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #F55353;
+    background-color: orange;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -48,14 +48,14 @@ body {
     justify-content: center;
 }
 
-.quantity-buttons {
+.quantity-buttons { /* контейнер с кнопками товара */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
 
-.quantity-button {
+.quantity-button { /* кнопки + и - */
     background-color: orange;
     color: white;
     border: none;
@@ -67,11 +67,11 @@ body {
     text-align: center;
 }
 
-.remove-button {
+.remove-button { /* доп. стиль для кнопки - */
     background-color: red;
 }
 
-.add-to-cart-button {
+.add-to-cart-button { /* кнопка В КОРЗИНУ */
     background-color: orange;
     border: none;
     padding: 10px;
@@ -83,7 +83,7 @@ body {
     text-align: center;
 }
 
-.cart-button {
+.cart-button { /* Кнопка КОРЗИНА */
     background-color: #143F6B;
     border: none;
     padding: 15px 50px;
@@ -92,19 +92,19 @@ body {
     text-align: center;
 }
 
-.cart-button:hover {
+.cart-button:hover { /* УДАЛИТЬ */
     background-color: #0E2D4E;
 }
 
-.cart-container {
-    display: flex;
+.cart-container { /* Контейнер для кнопки КОРЗИНА */
+    display: flex; 
     background-color: orange;
     /* justify-content: flex-end; */
     align-items: center; /* Добавьте это для вертикального выравнивания */
     padding: 5px;
 }
 
-.cart-popup {
+.cart-popup { /* Всплывающее окно корзины HTML */
     position: fixed;
     top: 0;
     left: 0;
@@ -117,11 +117,11 @@ body {
     z-index: 2000;
 }
 
-.cart-popup.show {
+.cart-popup.show { /* ? */
     display: flex;
 }
 
-.cart-popup-content {
+.cart-popup-content { /* Контейнер наполнения всплывающего окна корзины HTML */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -130,7 +130,7 @@ body {
     overflow-y: auto;
 }
 
-.cart-item {
+.cart-item { /* ? */
     margin-bottom: 10px;
 }
 
