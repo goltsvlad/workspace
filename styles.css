@@ -110,7 +110,7 @@ body {
     left: 0;
     right: 0;
     display: flex;
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color);
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; /* Всплывающее окно будет появляться снизу */
@@ -128,7 +128,7 @@ body {
 }
 
 .cart-button:hover { /* относится к всплывающему окну корзины */
-    background-color: #0E2D4E;
+    background-color: blue;
 }
 
 .cart-popup-content { /* Контейнер наполнения всплывающего окна корзины HTML */
