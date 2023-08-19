@@ -19,7 +19,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
   }, 0);
 
   var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' рублей.';
-  tg.sendData(data);
+  // tg.sendData(data);
   tg.showPopup();
 });
 
