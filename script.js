@@ -1,12 +1,12 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Оформить заказ';
+tg.MainButton.text = 'Замовити';
 tg.MainButton.textColor = '#F55353';
 tg.MainButton.color = '#143F6B';
 
 // Скрытие кнопки MainButton при загрузке страницы
-tg.MainButton.hide();
+// tg.MainButton.hide();
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
   var cartData = cart.map(function(item) {
@@ -77,9 +77,9 @@ function renderProducts() {
   var cartButton = document.querySelector('.cart-container');
 
   if (cart.length > 0) {
-    cartButton.style.display = 'block';
+    tg.MainButton.show();
   } else {
-    cartButton.style.display = 'none';
+    tg.MainButton.hide();
   }
 }
 
