@@ -1,7 +1,7 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Замовити';
+tg.MainButton.setText = 'Замовити';
 tg.MainButton.color = '#008000';
 
 
