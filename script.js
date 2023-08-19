@@ -20,8 +20,16 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
 
   var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' грн.';
   // tg.sendData(data);
-  tg.showPopup();
-});
+  
+  Telegram.WebApp.showPopup({
+    title: 'Popup title',
+    message: 'Popup message',
+    buttons: [
+      {id: 'delete', type: 'destructive', text: 'Delete all'},
+      {id: 'faq', type: 'default', text: 'Open FAQ'},
+      {type: 'cancel'},
+    ]
+  });
 
 var products = [
   { id: 1, name: "Товар 1", price: 100, image: "https://picsum.photos/200", count: 0 },
