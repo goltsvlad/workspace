@@ -74,8 +74,6 @@ function renderProducts() {
     productList.appendChild(productElement);
   });
 
-  var cartButton = document.querySelector('.cart-container');
-
   if (cart.length > 0) {
     tg.MainButton.show();
   } else {
