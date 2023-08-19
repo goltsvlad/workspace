@@ -8,7 +8,8 @@ tg.MainButton.color = '#76bb40';
 // Скрытие кнопки MainButton при загрузке страницы
 // tg.MainButton.hide();
 
-Telegram.WebApp.onEvent('mainButtonClicked', function() {
+//Telegram.WebApp.onEvent('mainButtonClicked', function() {
+Telegram.WebApp.onEvent('callback', function() {
   var cartData = cart.map(function(item) {
     return item.name + ' (x' + item.count + ') ' + item.count * item.price + ' рублей';
   }).join('\n');
@@ -76,6 +77,7 @@ function renderProducts() {
 
   if (cart.length > 0) {
     tg.MainButton.show();
+    tg.MainButton.onClick('callback');
   } else {
     tg.MainButton.hide();
   }
