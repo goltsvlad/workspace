@@ -120,6 +120,10 @@ body {
     display: flex;
 }
 
+.cart-item { /* ? */
+    margin-bottom: 10px;
+}
+
 .cart-popup-content { /* Контейнер наполнения всплывающего окна корзины HTML */
     padding: 20px;
     border-radius: 10px;
