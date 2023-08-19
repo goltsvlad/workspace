@@ -8,7 +8,6 @@ tg.MainButton.color = '#76bb40';
 // Скрытие кнопки MainButton при загрузке страницы
 // tg.MainButton.hide();
 
-//Telegram.WebApp.onEvent('mainButtonClicked', function() {
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
   var cartData = cart.map(function(item) {
     return item.name + ' (x' + item.count + ') ' + item.count * item.price + ' рублей';
@@ -19,17 +18,8 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
   }, 0);
 
   var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' грн.';
-  // tg.sendData(data);
-  
-  Telegram.WebApp.showPopup({
-    title: 'Popup title',
-    message: 'Popup message',
-    buttons: [
-      {id: 'delete', type: 'destructive', text: 'Delete all'},
-      {id: 'faq', type: 'default', text: 'Open FAQ'},
-      {type: 'cancel'},
-    ]
-  });
+  tg.sendData(data); 
+
 
 var products = [
   { id: 1, name: "Товар 1", price: 100, image: "https://picsum.photos/200", count: 0 },
@@ -86,7 +76,9 @@ function renderProducts() {
 
   if (cart.length > 0) {
     tg.MainButton.show();
-    // tg.MainButton.onClick('callback');
+    tg.MainButton.onClick(function() {
+      WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
+    });
   } else {
     tg.MainButton.hide();
   }
@@ -139,9 +131,6 @@ function updateCartPopup() {
 
 function toggleCartPopup() {
   var cartPopup = document.getElementById('cart-popup');
-  var cartButton = document.getElementById('cart-container');
-
-  cartButton.style.display = 'none';
 
   if (cartPopup.classList.contains('show')) {
     cartPopup.classList.remove('show');
