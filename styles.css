@@ -1,7 +1,6 @@
 body {
-    --bg-color: var(--tg-theme-bg-color);
     font-family: sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
     font-size: 14px;
     margin: 0;
@@ -117,12 +116,8 @@ body {
     z-index: 2000;
 }
 
-.cart-popup.show { /* ? */
-    display: flex;
-}
 
 .cart-popup-content { /* Контейнер наполнения всплывающего окна корзины HTML */
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -130,7 +125,4 @@ body {
     overflow-y: auto;
 }
 
-.cart-item { /* ? */
-    margin-bottom: 10px;
-}
 
