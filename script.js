@@ -1,7 +1,7 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.setText = 'Замовити';
+tg.MainButton.text = 'Замовити';
 tg.MainButton.color = '#008000';
 
 
@@ -151,6 +151,7 @@ function toggleCartPopup() {
 function closeCartPopup() {
   var cartPopup = document.getElementById('cart-popup');
   cartPopup.classList.remove('show');
+  tg.MainButton.setText = 'Замовити';
   tg.BackButton.hide();
 }
 
