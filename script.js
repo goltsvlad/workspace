@@ -2,7 +2,7 @@ var tg = window.Telegram.WebApp;
 
 tg.expand();
 tg.MainButton.text = 'Замовити';
-tg.MainButton.color = '#76bb40';
+tg.MainButton.color = '#008B8B';
 
 
 // Скрытие кнопки MainButton при загрузке страницы
@@ -139,9 +139,6 @@ function updateCartPopup() {
 
 function toggleCartPopup() {
   var cartPopup = document.getElementById('cart-popup');
-  var cartButton = document.getElementById('cart-container');
-
-  cartButton.style.display = 'none';
 
   if (cartPopup.classList.contains('show')) {
     cartPopup.classList.remove('show');
