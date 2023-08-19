@@ -18,7 +18,8 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
   }, 0);
 
   var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' грн.';
-  tg.sendData(data); 
+  tg.sendData(data);
+});
 
 
 var products = [
