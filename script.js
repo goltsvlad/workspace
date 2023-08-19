@@ -9,7 +9,7 @@ tg.MainButton.color = '#76bb40';
 // tg.MainButton.hide();
 
 //Telegram.WebApp.onEvent('mainButtonClicked', function() {
-Telegram.WebApp.onEvent('mainButtonClicked', 'callback', function() {
+Telegram.WebApp.onEvent('mainButtonClicked', function() {
   var cartData = cart.map(function(item) {
     return item.name + ' (x' + item.count + ') ' + item.count * item.price + ' рублей';
   }).join('\n');
@@ -20,6 +20,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', 'callback', function() {
 
   var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' рублей.';
   tg.sendData(data);
+  tg.showPopup();
 });
 
 var products = [
