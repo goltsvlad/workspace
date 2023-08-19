@@ -138,6 +138,7 @@ function updateCartPopup() {
 }
 
 function toggleCartPopup() {
+  tg.BackButton.show();
   var cartPopup = document.getElementById('cart-popup');
 
   if (cartPopup.classList.contains('show')) {
