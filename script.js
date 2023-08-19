@@ -8,7 +8,27 @@ tg.MainButton.color = '#76bb40';
 // Скрытие кнопки MainButton при загрузке страницы
 // tg.MainButton.hide();
 
+Telegram.WebApp.MainButton.onClick(() => {
+  var cartPopup = document.getElementById('cart-popup');
 
+  if (cartPopup.classList.contains('show')) {
+    // Всплывающее окно открыто, отправляем данные
+    var cartData = cart.map(function(item) {
+      return item.name + ' (x' + item.count + ') ' + item.count * item.price + ' рублей';
+    }).join('\n');
+    
+    var total = cart.reduce(function(sum, item) {
+      return sum + item.price * item.count;
+    }, 0);
+    
+    var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' рублей.';
+    tg.sendData(data);
+  
+  } else {
+    // Всплывающее окно закрыто, открываем его
+    toggleCartPopup();
+  }
+});
 
 
 var products = [
@@ -66,7 +86,7 @@ function renderProducts() {
 
   if (cart.length > 0) {
     tg.MainButton.show();
-    tg.MainButton.onClick(toggleCartPopup); 
+    
   } else {
     tg.MainButton.hide();
   }
