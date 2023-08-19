@@ -1,14 +1,14 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Замовити2';
+tg.MainButton.text = 'Замовити';
 tg.MainButton.color = '#76bb40';
 
 
 // Скрытие кнопки MainButton при загрузке страницы
 // tg.MainButton.hide();
 
-Telegram.WebApp.MainButton.onClick(() => {
+Telegram.WebApp.onEvent('mainButtonClicked', function() {
   var cartPopup = document.getElementById('cart-popup');
 
   if (cartPopup.classList.contains('show')) {
