@@ -30,6 +30,8 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
   }
 });
 
+Telegram.WebApp.onEvent('backButtonClicked', closeCartPopup) 
+
 
 var products = [
   { id: 1, name: "Товар 1", price: 100, image: "https://picsum.photos/200", count: 0 },
@@ -157,15 +159,7 @@ function toggleCartPopup() {
 function closeCartPopup() {
   var cartPopup = document.getElementById('cart-popup');
   cartPopup.classList.remove('show');
-  tg.MainButton.hide();
-
-  var cartButton = document.querySelector('.cart-container');
-
-  if (cart.length > 0) {
-    cartButton.style.display = 'block';
-  } else {
-    cartButton.style.display = 'none';
-  }
+  tg.BackButton.hide();
 }
 
 renderProducts();
