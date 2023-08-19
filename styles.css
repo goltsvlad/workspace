@@ -109,7 +109,6 @@ body {
     bottom: -100%; /* Начальное положение всплывающего окна за пределами экрана */
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
