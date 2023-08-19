@@ -77,7 +77,7 @@ function renderProducts() {
   if (cart.length > 0) {
     tg.MainButton.show();
     tg.MainButton.onClick(function() {
-      WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
+      tg.showAlert("Хорошо, ты нажал на главную кнопку.");
     });
   } else {
     tg.MainButton.hide();
