@@ -120,11 +120,11 @@ body {
     display: flex;
 }
 
-.cart-item { /* ? */
+.cart-item { /* относится к всплывающему окну корзины */
     margin-bottom: 10px;
 }
 
-.cart-button:hover { /* УДАЛИТЬ */
+.cart-button:hover { /* относится к всплывающему окну корзины */
     background-color: #0E2D4E;
 }
 
