@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px; /* Отступ для учета navbar */
-    margin: 7px; /* Отступ по краям */
+    margin: 10px; /* Отступ по краям */
 }
 
 .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
