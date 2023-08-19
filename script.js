@@ -2,6 +2,7 @@ var tg = window.Telegram.WebApp;
 
 tg.expand();
 tg.MainButton.text = 'Замовити';
+tg.MainButton.color = '#76bb40';
 
 
 // Скрытие кнопки MainButton при загрузке страницы
