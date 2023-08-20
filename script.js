@@ -127,20 +127,9 @@ function updateCartPopup() {
 
   var cartItemsContent = cart
     .map(function (item) {
-      var itemCountBadge = item.count > 1 ? `x${item.count}` : '';
-      var totalPrice = item.count * item.price;
-      return `
-        <div class="cart-item">
-          <img class="cart-item-image" src="${item.image}" alt="${item.name}">
-          <div class="cart-item-details">
-            <div class="cart-item-name">${item.name}</div>
-            ${itemCountBadge}
-          </div>
-          <div class="cart-item-price">${totalPrice} рублей</div>
-        </div>
-      `;
+      return `${item.name} (x${item.count}) - ${item.count * item.price} рублей`;
     })
-    .join('');
+    .join('<br>');
 
   var totalAmount = cart.reduce(function (sum, item) {
     return sum + item.price * item.count;
