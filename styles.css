@@ -124,20 +124,49 @@ body {
     cursor: pointer;
 }
 
-.cart-popup-content { /* главный контейнер контента в корзине */
+.cart-popup-content {
     display: flex;
-    flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
-    margin: 10px;
-    overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
+    flex-direction: column;
+    align-items: stretch; /* Распределить элементы по вертикали */
+    padding: 10px;
+    overflow-y: auto; /* Добавить вертикальный скролл при необходимости */
 }
 
-.cart-item { /* контейнер продукта в корзине */
-    background-color: white;
+.cart-item {
+    display: flex;
+    color: white;
+    background-color: orange;
     align-items: center;
-    position: relative;
-    height: calc(20% - 20px);
-    width: 100%; /* Занимает всю ширину родительского блока */
-    margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
+.cart-item-image {
+    width: 80px; /* Ширина картинки */
+    height: 80px; /* Высота картинки */
+    margin-right: 10px;
+}
 
+.cart-item-image img {
+    width: 100%; /* Растягивание картинки по ширине */
+    height: 100%; /* Растягивание картинки по высоте */
+    object-fit: cover; /* Обрезание изображения, сохраняя пропорции */
+    border-radius: 50%; /* Закругление углов для круглой картинки */
+}
+
+.cart-item-name {
+    font-weight: bold;
+}
+
+.cart-item-count,
+.cart-item-price {
+    margin-top: 5px;
+}
+
+.cart-item-count::before,
+.cart-item-price::before {
+    content: " - ";
+    margin: 0 5px;
+    color: gray;
+}
