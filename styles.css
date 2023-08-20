@@ -163,7 +163,7 @@ body {
 .cart-item-count {
     font-weight: bold;
     color: green; /* Зелёный цвет для количества */
-    padding: 5px;
+    margin-left: 10px;
 }
 
 .cart-item-price {
