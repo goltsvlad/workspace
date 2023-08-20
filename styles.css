@@ -127,9 +127,9 @@ body {
 .cart-popup-content {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Распределить элементы по вертикали */
+    align-items: stretch;
     padding: 10px;
-    overflow-y: auto; /* Добавить вертикальный скролл при необходимости */
+    overflow-y: auto;
 }
 
 .cart-item {
@@ -143,30 +143,29 @@ body {
 }
 
 .cart-item-image {
-    width: 80px; /* Ширина картинки */
-    height: 80px; /* Высота картинки */
+    width: 80px;
+    height: 80px;
     margin-right: 10px;
+    border-radius: 10px; /* Закруглённые углы */
+    overflow: hidden; /* Обрезаем изображение по границам */
 }
 
 .cart-item-image img {
-    width: 100%; /* Растягивание картинки по ширине */
-    height: 100%; /* Растягивание картинки по высоте */
-    object-fit: cover; /* Обрезание изображения, сохраняя пропорции */
-    border-radius: 50%; /* Закругление углов для круглой картинки */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cart-item-name {
     font-weight: bold;
 }
 
-.cart-item-count,
-.cart-item-price {
+.cart-item-count {
+    color: green; /* Зелёный цвет для количества */
     margin-top: 5px;
 }
 
-.cart-item-count::before,
-.cart-item-price::before {
-    content: " - ";
-    margin: 0 5px;
-    color: gray;
+.cart-item-price {
+    margin-top: 5px;
+    margin-left: auto; /* Выравнивание цены по правому краю */
 }
