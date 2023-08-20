@@ -123,14 +123,23 @@ function updateQuantity(id, amount) {
 
 function updateCartPopup() {
   var cartItemsPopup = document.getElementById('cart-items-popup');
+  cartItemsPopup.innerHTML = ''; // Очищаем содержимое перед заполнением
 
-  var cartItemsContent = cart
-    .map(function (item) {
-      return `${item.name} (x${item.count}) - ${item.count * item.price} рублей`;
-    })
-    .join('<br>');
+  cart.forEach(function (item) {
+    var itemBlock = document.createElement('div');
+    itemBlock.classList.add('cart-item');
 
-  cartItemsPopup.innerHTML = cartItemsContent;
+    itemBlock.innerHTML = `
+      <div class="cart-item-image">
+        <img src="${item.image}" alt="${item.name}">
+      </div>
+      <div class="cart-item-name">${item.name}</div>
+      <div class="cart-item-count">Количество: ${item.count}</div>
+      <div class="cart-item-price">Цена: ${item.price} грн.</div>
+    `;
+
+    cartItemsPopup.appendChild(itemBlock);
+  });
 }
 
 function toggleCartPopup() {
