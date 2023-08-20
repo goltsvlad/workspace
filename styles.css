@@ -10,7 +10,7 @@ body {
 
 .product-list { /* главный контейнер товара */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
 }
@@ -126,8 +126,7 @@ body {
 
 .cart-item { /* контейнер продукта в корзине */
     display: flex;
-    color: white;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: white;
     align-items: center;
     /*flex-direction: row; */
     height: calc(20% - 20px);
@@ -135,7 +134,10 @@ body {
     margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
 }
 
-.cart-popup-content {
+.cart-popup-content { /* главный контейнер в корзине */
+    display: flex;
+    flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
+    margin: 10px;
     overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
 }
 
