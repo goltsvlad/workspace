@@ -122,14 +122,16 @@ body {
     font-size: 16px;
     color: green;
     cursor: pointer;
+}
 
 .cart-item {
     display: flex;
     color: white;
     background-color: orange;
     align-items: center;
-    width: 100%; /* Занимает всю ширину родительского блока */
+    /*flex-direction: row;
     height: calc(20% - 20px);
+    width: 100%; /* Занимает всю ширину родительского блока */
     margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
 }
 
