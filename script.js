@@ -123,7 +123,6 @@ function updateQuantity(id, amount) {
 
 function updateCartPopup() {
   var cartItemsPopup = document.getElementById('cart-items-popup');
-  var cartTotalPopup = document.getElementById('cart-total-popup');
 
   var cartItemsContent = cart
     .map(function (item) {
@@ -131,12 +130,7 @@ function updateCartPopup() {
     })
     .join('<br>');
 
-  var totalAmount = cart.reduce(function (sum, item) {
-    return sum + item.price * item.count;
-  }, 0);
-
   cartItemsPopup.innerHTML = cartItemsContent;
-  cartTotalPopup.innerHTML = `Итого: ${totalAmount} рублей`;
 }
 
 function toggleCartPopup() {
@@ -150,7 +144,7 @@ function toggleCartPopup() {
     return sum + item.price * item.count;
   }, 0);
 
-  tg.MainButton.setText(`Итого: ${totalAmount} рублей`);
+  tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
 }
 
 function closeCartPopup() {
