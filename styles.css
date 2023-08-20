@@ -108,7 +108,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    margin: 10px; /* Отступ по краям */
+    padding: 25px;
     background-color: var(--tg-theme-bg-color);
 }
 
@@ -154,7 +155,7 @@ body {
 
 .cart-popup-content {
     flex-grow: 1; /* Занимать все доступное пространство внутри всплывающего окна */
-    padding: 20px;
+    margin: 10px; /* Отступ по краям */
     max-height: 80%; /* Ограничение на максимальную высоту */
     overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
 }
