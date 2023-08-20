@@ -127,9 +127,9 @@ body {
 .cart-item {
     display: flex;
     color: white;
-    background-color: orange;
+    background-color: var(--tg-theme-secondary-bg-color);
     align-items: center;
-    /*flex-direction: row;
+    /*flex-direction: row; */
     height: calc(20% - 20px);
     width: 100%; /* Занимает всю ширину родительского блока */
     margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
