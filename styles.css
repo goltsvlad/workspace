@@ -93,7 +93,7 @@ body {
     right: 0;
     background-color: var(--tg-theme-secondary-bg-color);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     height: 100vh; /* Здесь используется 100vh для высоты экрана */
     transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
@@ -108,8 +108,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px; /* Отступ по краям */
-    padding: 25px;
+    padding: 25px; /* отступ по краям внутри контейнера */
     background-color: var(--tg-theme-bg-color);
 }
 
@@ -126,13 +125,12 @@ body {
 }
 
 .cart-item {
-    display: flex;
     text-align: center;
     position: relative;
     justify-content: space-between;
-    align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    height: calc(15vh - 10px); /* Каждый элемент будет занимать 33.33% высоты экрана минус 10px */
+    margin-bottom: 10px; /* Отступ вниз между элементами */
 }
 
 .cart-item-image {
