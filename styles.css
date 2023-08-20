@@ -125,6 +125,7 @@ body {
 
 .cart-item {
     display: flex;
+    color: white;
     align-items: center;
     width: 100%; /* Занимает всю ширину родительского блока */
     height: calc(20% - 20px);
