@@ -137,7 +137,6 @@ function updateCartPopup() {
 
   cartItemsPopup.innerHTML = cartItemsContent;
   cartTotalPopup.innerHTML = `Итого: ${totalAmount} рублей`;
-  tg.MainButton.setText(cartTotalPopup.innerHTML);
 }
 
 function toggleCartPopup() {
@@ -146,6 +145,12 @@ function toggleCartPopup() {
 
   updateCartPopup();
   cartPopup.classList.add('show');
+
+  var totalAmount = cart.reduce(function (sum, item) {
+    return sum + item.price * item.count;
+  }, 0);
+
+  tg.MainButton.setText(`Итого: ${totalAmount} рублей`);
 }
 
 function closeCartPopup() {
