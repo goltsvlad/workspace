@@ -93,7 +93,7 @@ body {
     right: 0;
     background-color: var(--tg-theme-secondary-bg-color);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     height: 100vh; /* Здесь используется 100vh для высоты экрана */
     transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
@@ -105,9 +105,10 @@ body {
 }
 
 .cart-popup-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px; /* отступ по краям внутри контейнера */
+    padding: 10px;
     background-color: var(--tg-theme-bg-color);
 }
 
@@ -121,38 +122,14 @@ body {
     font-size: 16px;
     color: green;
     cursor: pointer;
-}
 
-.cart-item {
-    text-align: center;
-    position: relative;
-    justify-content: space-between;
-    padding: 10px;
-    height: calc(15vh - 10px); /* Каждый элемент будет занимать 33.33% высоты экрана минус 10px */
-    margin-bottom: 10px; /* Отступ вниз между элементами */
-}
-
-.cart-item-image {
-    border-radius: 10px;
-}
-
-.cart-item-details {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-item-name {
-    font-weight: bold;
-}
-
-.cart-item-price {
-    color: green;
+.cart-item { /* относится к всплывающему окну корзины */
+    margin-bottom: 50px;
 }
 
 .cart-popup-content {
     flex-grow: 1; /* Занимать все доступное пространство внутри всплывающего окна */
-    margin: 10px; /* Отступ по краям */
+    padding: 20px;
     max-height: 80%; /* Ограничение на максимальную высоту */
     overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
 }
