@@ -1,7 +1,7 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Замовити';
+tg.MainButton.text = 'Замовити2';
 tg.MainButton.color = '#008000';
 
 
@@ -122,8 +122,8 @@ function updateQuantity(id, amount) {
 }
 
 function updateCartPopup() {
-  var cartItemsPopup = document.getElementById('cart-items-popup');
-  cartItemsPopup.innerHTML = ''; // Очищаем содержимое перед заполнением
+  var cartPopupContent = document.querySelector('.cart-popup-content');
+  cartPopupContent.innerHTML = ''; // Очищаем содержимое перед заполнением
 
   cart.forEach(function (item) {
     var itemBlock = document.createElement('div');
@@ -138,7 +138,7 @@ function updateCartPopup() {
       <div class="cart-item-price">Цена: ${item.price} грн.</div>
     `;
 
-    cartItemsPopup.appendChild(itemBlock);
+    cartPopupContent.appendChild(itemBlock);
   });
 }
 
