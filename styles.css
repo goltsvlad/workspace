@@ -105,7 +105,6 @@ body {
 }
 
 .cart-popup-header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px; /* отступ по краям внутри контейнера */
@@ -148,7 +147,7 @@ body {
 }
 
 .cart-item-price {
-    color: orange;
+    color: green;
 }
 
 .cart-popup-content {
