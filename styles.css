@@ -151,12 +151,11 @@ body {
     background-color: blue;
 }
 
-.cart-popup-content { /* Контейнер наполнения всплывающего окна корзины HTML */
+.cart-popup-content {
+    flex-grow: 1; /* Занимать все доступное пространство внутри всплывающего окна */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-height: 80%;
-    overflow-y: auto;
+    max-height: 80%; /* Ограничение на максимальную высоту */
+    overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
 }
 
 
