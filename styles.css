@@ -124,21 +124,20 @@ body {
     cursor: pointer;
 }
 
-.cart-item { /* контейнер продукта в корзине */
-    display: flex;
-    background-color: white;
-    align-items: center;
-    /*flex-direction: row; */
-    height: calc(20% - 20px);
-    width: 100%; /* Занимает всю ширину родительского блока */
-    margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
-}
-
-.cart-popup-content { /* главный контейнер в корзине */
+.cart-popup-content { /* главный контейнер контента в корзине */
     display: flex;
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin: 10px;
     overflow-y: auto; /* Включение вертикальной прокрутки, если контент не помещается */
+}
+
+.cart-item { /* контейнер продукта в корзине */
+    background-color: white;
+    align-items: center;
+    position: relative;
+    height: calc(20% - 20px);
+    width: 100%; /* Занимает всю ширину родительского блока */
+    margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
 }
 
 
