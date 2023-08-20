@@ -124,6 +124,25 @@ body {
     transform: translateY(0); /* Показать всплывающее окно */
 }
 
+.cart-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--tg-theme-bg-color);
+}
+
+.cart-popup-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--tg-theme-text-color);
+}
+
+.edit-button {
+    font-size: 16px;
+    color: green;
+    cursor: pointer;
+
 .cart-item { /* относится к всплывающему окну корзины */
     margin-bottom: 10px;
 }
