@@ -123,8 +123,12 @@ body {
     color: green;
     cursor: pointer;
 
-.cart-item { /* относится к всплывающему окну корзины */
-    margin-bottom: 50px;
+.cart-item {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Занимает всю ширину родительского блока */
+    height: 25px; /* Высота в 25px */
+    margin-bottom: 10px; /* Добавляем немного отступа снизу между блоками */
 }
 
 .cart-popup-content {
