@@ -86,24 +86,6 @@ body {
     text-align: center;
 }
 
-.cart-button { /* Кнопка КОРЗИНА */
-    background-color: #143F6B;
-    border: none;
-    padding: 15px 50px;
-    cursor: pointer;
-    border-radius: 10px; /* округление углов */
-    text-align: center;
-}
-
-
-.cart-container { /* Контейнер для кнопки КОРЗИНА */
-    display: flex; 
-    background-color: orange;
-    /* justify-content: flex-end; */
-    align-items: center; /* Добавьте это для вертикального выравнивания */
-    padding: 5px;
-}
-
 .cart-popup {
     position: fixed;
     bottom: 0;
@@ -140,15 +122,11 @@ body {
 
 .edit-button {
     font-size: 16px;
-    color: green;
+    color: orange;
     cursor: pointer;
 
 .cart-item { /* относится к всплывающему окну корзины */
-    margin-bottom: 10px;
-}
-
-.cart-button:hover { /* относится к всплывающему окну корзины */
-    background-color: blue;
+    margin-bottom: 50px;
 }
 
 .cart-popup-content {
