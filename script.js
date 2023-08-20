@@ -134,8 +134,8 @@ function updateCartPopup() {
         <img src="${item.image}" alt="${item.name}">
       </div>
       <div class="cart-item-name">${item.name}</div>
-      <div class="cart-item-count">Количество: ${item.count}</div>
-      <div class="cart-item-price">Цена: ${item.price} грн.</div>
+      <div class="cart-item-count">x${item.count}</div>
+      <div class="cart-item-price">${item.price}₴</div>
     `;
 
     cartPopupContent.appendChild(itemBlock);
