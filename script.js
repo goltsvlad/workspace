@@ -151,7 +151,7 @@ function toggleCartPopup() {
 function closeCartPopup() {
   var cartPopup = document.getElementById('cart-popup');
   cartPopup.classList.remove('show');
-  tg.MainButton.setText = 'Замовити';
+  tg.MainButton.setText("Замовити");
   tg.BackButton.hide();
 }
 
