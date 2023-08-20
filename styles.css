@@ -104,23 +104,24 @@ body {
     padding: 5px;
 }
 
-.cart-popup { /* Всплывающее окно корзины HTML */
+.cart-popup {
     position: fixed;
-    bottom: -100%; /* Начальное положение всплывающего окна за пределами экрана */
+    bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     background-color: var(--tg-theme-secondary-bg-color);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Всплывающее окно будет появляться снизу */
+    justify-content: flex-end;
     width: 100%;
-    height: 100%;
-    transition: bottom 0.3s ease-in-out; /* Анимация появления/скрытия */
+    height: 100vh; /* Здесь используется 100vh для высоты экрана */
+    transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
+    transform: translateY(100%); /* Начальное положение за пределами экрана */
 }
 
-.cart-popup.show { /* показ всплывающего окна корзины */
-    bottom: 0; /* Показать всплывающее окно при добавлении класса "show" */
+.cart-popup.show {
+    transform: translateY(0); /* Показать всплывающее окно */
 }
 
 .cart-item { /* относится к всплывающему окну корзины */
