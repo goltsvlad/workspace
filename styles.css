@@ -108,7 +108,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    margin: 10px;
     background-color: var(--tg-theme-bg-color);
 }
 
@@ -135,7 +135,7 @@ body {
 .cart-item {
     display: flex;
     color: white;
-    background-color: orange;
+    background-color: var(--tg-theme-bg-color);
     align-items: center;
     padding: 10px;
     margin: 5px 0;
@@ -162,7 +162,7 @@ body {
 
 .cart-item-count {
     font-weight: bold;
-    color: green; /* Зелёный цвет для количества */
+    color: orange; /* Зелёный цвет для количества */
     margin-left: 10px;
 }
 
