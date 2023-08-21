@@ -1,7 +1,7 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Замовити2';
+tg.MainButton.text = 'Замовити';
 tg.MainButton.color = '#008000';
 
 
@@ -134,7 +134,7 @@ function updateCartPopup() {
         <img src="${item.image}" alt="${item.name}">
       </div>
       <div class="cart-item-name">${item.name}</div>
-      <div class="cart-item-count">x${item.count}</div>
+      <div class="cart-item-count">${item.count}x</div>
       <div class="cart-item-price">${item.price}₴</div>
     `;
 
