@@ -135,7 +135,7 @@ function updateCartPopup() {
       </div>
       <div class="cart-item-name">${item.name}</div>
       <div class="cart-item-count">${item.count}x</div>
-      <div class="cart-item-price">${item.price}₴</div>
+      <div class="cart-item-price">${item.price * item.count}₴</div>
     `;
 
     cartPopupContent.appendChild(itemBlock);
