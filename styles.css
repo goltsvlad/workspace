@@ -109,7 +109,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 30px;
     background-color: var(--tg-theme-bg-color);
     overflow-y: auto;
 }
@@ -178,7 +178,7 @@ body {
 }
 
 #order-comment {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid var(--tg-theme-text-color);
     border-radius: 5px;
