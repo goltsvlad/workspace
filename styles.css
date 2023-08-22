@@ -178,15 +178,30 @@ body {
     resize: vertical; /* Позволяет изменять размер вертикально */
 }
 
-#order-comment {
+/*#order-comment {
     width: 100%;
     font-size: 14px;
     /*padding: 10px; */
     /*border: 1px solid var(--tg-theme-text-color);
-    border-radius: 5px; */
+    border-radius: 5px; 
     background-color: transparent;
     color: var(--tg-theme-text-color);
-    resize: vertical; /* Позволяет изменять размер вертикально */
+    resize: vertical; /* Позволяет изменять размер вертикально 
     height: auto;
-    /* min-height: 100px; /* Минимальная высота текстового поля */
+    /* min-height: 100px; /* Минимальная высота текстового поля
+}*/
+
+#order-comment {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: attr(data-placeholder);
+    color: var(--tg-theme-hint-color, #ccc);
+    padding: 0 20px;
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
 }
