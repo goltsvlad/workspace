@@ -111,6 +111,7 @@ body {
     align-items: center;
     padding: 15px;
     background-color: var(--tg-theme-bg-color);
+    overflow-y: auto;
 }
 
 .cart-popup-title { /* текст заголовка окна корзины */
