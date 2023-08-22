@@ -20,8 +20,10 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     var total = cart.reduce(function(sum, item) {
       return sum + item.price * item.count;
     }, 0);
+
+    var orderComment = document.getElementById('order-comment').value;
     
-    var data = 'Ваш заказ:\n' + cartData + '\nИтого: ' + total.toString() + ' рублей.';
+    var data = 'Ваш заказ:\n' + cartData + '\nКомментарий: ' + orderComment + '\nИтого: ' + total.toString() + ' рублей.';
     tg.sendData(data);
   
   } else {
@@ -134,6 +136,14 @@ function updateCartPopup() {
 
   cartPopupContent.appendChild(cartPopupHeader);
 
+  // Добавляем блок для комментария к заказу
+  var commentBlock = document.createElement('div');
+  commentBlock.classList.add('comment-block');
+  commentBlock.innerHTML = `
+    <textarea id="order-comment" placeholder="Введите комментарий к заказу"></textarea>
+  `;
+  cartPopupContent.appendChild(commentBlock);
+
   cart.forEach(function (item) {
     var itemBlock = document.createElement('div');
     itemBlock.classList.add('cart-item');
@@ -150,6 +160,7 @@ function updateCartPopup() {
     cartPopupContent.appendChild(itemBlock);
   });
 }
+
 
 function toggleCartPopup() {
   tg.BackButton.show();
