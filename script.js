@@ -125,6 +125,15 @@ function updateCartPopup() {
   var cartPopupContent = document.querySelector('.cart-popup-content');
   cartPopupContent.innerHTML = ''; // Очищаем содержимое перед заполнением
 
+  var cartPopupHeader = document.createElement('div');
+  cartPopupHeader.classList.add('cart-popup-header');
+  cartPopupHeader.innerHTML = `
+    <div class="cart-popup-title">Кошик</div>
+    <div class="edit-button" onclick="closeCartPopup()">Ред.</div>
+  `;
+
+  cartPopupContent.appendChild(cartPopupHeader);
+
   cart.forEach(function (item) {
     var itemBlock = document.createElement('div');
     itemBlock.classList.add('cart-item');
