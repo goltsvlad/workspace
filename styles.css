@@ -169,3 +169,20 @@ body {
     color: var(--tg-theme-text-color);
     margin-left: auto; /* Выравнивание цены по правому краю */
 }
+
+.comment-block {
+    background-color: var(--tg-theme-bg-color);
+    padding: 15px;
+    margin-top: 10px; /* Отступ между товарами и комментарием */
+}
+
+#order-comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--tg-theme-text-color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--tg-theme-text-color);
+    resize: vertical; /* Позволяет изменять размер вертикально */
+    min-height: 100px; /* Минимальная высота текстового поля */
+}
