@@ -109,7 +109,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     background-color: var(--tg-theme-bg-color);
     overflow-y: auto;
 }
@@ -138,7 +138,7 @@ body {
     color: white;
     background-color: var(--tg-theme-bg-color);
     align-items: center;
-    padding: 15px;
+    padding: 20px;
 }
 
 .cart-item-image {
@@ -172,18 +172,19 @@ body {
 
 .comment-block {
     background-color: var(--tg-theme-bg-color);
-    padding: 15px;
+    padding: 20px;
     margin-top: 10px; /* Отступ между товарами и комментарием */
     resize: vertical; /* Позволяет изменять размер вертикально */
 }
 
 #order-comment {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--tg-theme-text-color);
-    border-radius: 5px;
+    /*padding: 10px; */
+    /*border: 1px solid var(--tg-theme-text-color);
+    border-radius: 5px; */
     background-color: transparent;
     color: var(--tg-theme-text-color);
     resize: vertical; /* Позволяет изменять размер вертикально */
+    height: auto;
     /* min-height: 100px; /* Минимальная высота текстового поля */
 }
