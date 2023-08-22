@@ -22,8 +22,9 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
     }, 0);
 
     var orderComment = document.getElementById('order-comment').value;
+    var commentText = orderComment ? 'Коментар: ' + orderComment + '\n' : ''; // Проверка наличия комментария
     
-    var data = 'Ваш заказ:\n' + cartData + '\nКомментарий: ' + orderComment + '\nИтого: ' + total.toString() + ' рублей.';
+    var data = 'Ваш заказ:\n' + cartData + '\n' + commentText + 'Итого: ' + total.toString() + ' рублей.';
     tg.sendData(data);
   
   } else {
