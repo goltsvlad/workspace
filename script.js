@@ -69,8 +69,8 @@ function renderProducts() {
           product.count > 0
             ? `<div class="count-badge">${product.count}</div>`
             : ''
-          <button class="menu-button" onclick="showProductMenu()">≡</button>
         }
+        <button class="menu-button" onclick="showProductMenu()">≡</button>
       </div>
       <div class="product-name">${product.name}</div>
       <div class="product-price">${product.price} рублей</div>
