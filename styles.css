@@ -195,7 +195,6 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    content: attr(data-placeholder);
     color: var(--tg-theme-hint-color, #ccc);
     padding: 0 20px;
     font-weight: normal;
