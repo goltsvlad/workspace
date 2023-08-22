@@ -136,14 +136,6 @@ function updateCartPopup() {
 
   cartPopupContent.appendChild(cartPopupHeader);
 
-  // Добавляем блок для комментария к заказу
-  var commentBlock = document.createElement('div');
-  commentBlock.classList.add('comment-block');
-  commentBlock.innerHTML = `
-    <textarea id="order-comment" placeholder="Введите комментарий к заказу"></textarea>
-  `;
-  cartPopupContent.appendChild(commentBlock);
-
   cart.forEach(function (item) {
     var itemBlock = document.createElement('div');
     itemBlock.classList.add('cart-item');
@@ -159,7 +151,17 @@ function updateCartPopup() {
 
     cartPopupContent.appendChild(itemBlock);
   });
+
+  // Добавляем блок с комментарием под товарами
+  var commentBlock = document.createElement('div');
+  commentBlock.classList.add('comment-block');
+  commentBlock.innerHTML = `
+    <textarea id="order-comment" placeholder="Введите комментарий к заказу"></textarea>
+  `;
+
+  cartPopupContent.appendChild(commentBlock);
 }
+
 
 
 function toggleCartPopup() {
