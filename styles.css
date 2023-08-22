@@ -78,6 +78,7 @@ body {
     background-color: orange;
     color: white;
     border: none;
+    font-size: 14px;
     padding: 10px;
     cursor: pointer;
     width: 100%;
@@ -179,6 +180,7 @@ body {
 
 #order-comment {
     width: 100%;
+    font-size: 14px;
     /*padding: 10px; */
     /*border: 1px solid var(--tg-theme-text-color);
     border-radius: 5px; */
