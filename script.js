@@ -63,7 +63,7 @@ function renderProducts() {
     productElement.classList.add('product');
 
     productElement.innerHTML = `
-      <div>
+      <div class="product-image-container">
         <img class="product-image" src="${product.image}" alt="${product.name}">
         ${
           product.count > 0
