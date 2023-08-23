@@ -193,14 +193,17 @@ body {
 
 /* Стили для всплывающего окна description*/
 .description-popup {
-    display: none;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
+    background-color: var(--tg-theme-secondary-bg-color);
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    height: 100%; /* Здесь используется 100vh для высоты экрана */
+    transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
+    transform: translateY(100%); /* Начальное положение за пределами экрана */
 }
 
 .description-popup-content {
