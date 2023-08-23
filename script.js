@@ -68,7 +68,7 @@ function renderProducts() {
         ${
           product.count > 0
             ? `<div class="count-badge">${product.count}</div>`
-            : ''
+            : '<div class="count-badge"></div>' // Пустой блок-заполнитель
         }
         <button class="menu-button" onclick="toggleDescription()">≡</button>
       </div>
