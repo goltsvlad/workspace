@@ -36,20 +36,26 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
 Telegram.WebApp.onEvent('backButtonClicked', closeCartPopup) 
 
 
-var products = [
-  { id: 1, name: "Товар 1", price: 100, image: "https://picsum.photos/200", count: 0 },
-  { id: 2, name: "Товар 2", price: 200, image: "https://picsum.photos/200", count: 0 },
-  { id: 3, name: "Товар 3", price: 300, image: "https://picsum.photos/200", count: 0 },
-  { id: 4, name: "Товар 4", price: 400, image: "https://picsum.photos/200", count: 0 },
-  { id: 5, name: "Товар 5", price: 500, image: "https://picsum.photos/200", count: 0 },
-  { id: 6, name: "Товар 6", price: 600, image: "https://picsum.photos/200", count: 0 },
-  { id: 7, name: "Товар 7", price: 700, image: "https://picsum.photos/200", count: 0 },
-  { id: 8, name: "Товар 8", price: 800, image: "https://picsum.photos/200", count: 0 },
-  { id: 9, name: "Товар 9", price: 900, image: "https://picsum.photos/200", count: 0 },
-  { id: 10, name: "Товар 10", price: 1000, image: "https://picsum.photos/200", count: 0 },
-  { id: 11, name: "Товар 11", price: 1100, image: "https://picsum.photos/200", count: 0 },
-  { id: 12, name: "Товар 12", price: 1200, image: "https://picsum.photos/200", count: 0 }
-];
+// Загрузка данных из offers.json
+var products = []; // Здесь будут храниться товары
+
+// Функция для загрузки данных из offers.json
+function loadProducts() {
+  fetch('offers.json')
+    .then(response => response.json())
+    .then(data => {
+      products = data.map(item => ({
+        id: item.id,
+        name: item.name,
+        description: item.description, // Добавлено описание товара
+        price: item.price,
+        image: item.image,
+        count: 0
+      }));
+      renderProducts();
+    })
+    .catch(error => console.error('Error loading products:', error));
+}
 
 var cart = [];
 
