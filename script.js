@@ -97,15 +97,51 @@ function renderProducts() {
       </div>
     `;
 
+    // Добавь следующий код для добавления обработчика события на картинку товара
+    var productImage = productElement.querySelector('.product-image');
+    productImage.addEventListener('click', function() {
+      openProductModal(product);
+    });
+
     productList.appendChild(productElement);
   });
 
   if (cart.length > 0) {
     tg.MainButton.show();
-    
   } else {
     tg.MainButton.hide();
   }
+}
+
+function openProductModal(product) {
+  var productModal = document.createElement('div');
+  productModal.classList.add('product-modal');
+  
+  var modalContent = document.createElement('div');
+  modalContent.classList.add('product-modal-content');
+  
+  var closeButton = document.createElement('span');
+  closeButton.classList.add('close-button');
+  closeButton.textContent = '×';
+  closeButton.addEventListener('click', closeProductModal);
+  
+  var modalProductImage = document.createElement('img');
+  modalProductImage.classList.add('modal-product-image');
+  modalProductImage.src = product.image;
+  modalProductImage.alt = product.name;
+  
+  var modalProductDescription = document.createElement('div');
+  modalProductDescription.classList.add('modal-product-description');
+  modalProductDescription.textContent = product.description;
+  
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(modalProductImage);
+  modalContent.appendChild(modalProductDescription);
+  
+  productModal.appendChild(modalContent);
+  document.body.appendChild(productModal);
+  
+  productModal.style.display = 'block';
 }
 
 function updateQuantity(id, amount) {
