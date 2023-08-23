@@ -37,7 +37,7 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    z-index: 1; /* Чтобы кнопка была поверх изображения */
+    z-index: 2; /* Чтобы кнопка была поверх изображения */
 }
 
 .product-name { /* название товара */
@@ -112,6 +112,7 @@ body {
     height: 100%; /* Здесь используется 100vh для высоты экрана */
     transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
     transform: translateY(100%); /* Начальное положение за пределами экрана */
+    z-index: 3; /* Установите значение, большее чем у .menu-button */
 }
 
 .cart-popup.show { /* показ окна корзины */
@@ -214,5 +215,4 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     pointer-events: none;
-    z-index: -1;
 }
