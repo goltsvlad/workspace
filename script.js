@@ -100,7 +100,7 @@ function renderProducts() {
     // Добавь следующий код для добавления обработчика события на картинку товара
     var productImage = productElement.querySelector('.product-image');
     productImage.addEventListener('click', function() {
-      toggleDescriptionPopup(productId);
+      toggleDescriptionPopup(product.id);
     });
 
     productList.appendChild(productElement);
@@ -113,7 +113,7 @@ function renderProducts() {
   }
 }
 
-function toggleDescriptionPopup(productId) {
+function toggleDescriptionPopup(product.id) {
   var descriptionPopup = document.getElementById('description-popup');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
