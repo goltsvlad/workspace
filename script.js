@@ -70,7 +70,6 @@ function renderProducts() {
             ? `<div class="count-badge">${product.count}</div>`
             : ''
         }
-        <button class="menu-button" onclick="toggleDescription()">≡</button>
       </div>
       <div class="product-name">${product.name}</div>
       <div class="product-price">${product.price} рублей</div>
