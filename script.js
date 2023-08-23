@@ -131,6 +131,9 @@ function toggleDescriptionPopup(productId) {
     
     descriptionPopup.classList.add('show');
     tg.BackButton.show();
+    // Записать лог в элемент log-output
+    var logOutput = document.getElementById('log-output');
+    logOutput.innerHTML += `Description popup opened for product ID: ${productId}<br>`;
   }
 }
 
