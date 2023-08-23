@@ -26,6 +26,14 @@ body {
 .product-image { /* картинка товара */
     width: 100%;
     border-radius: 10px;
+    position: relative; /* позволяет установить position: absolute; для кнопки меню */
+}
+
+.menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1; /* Чтобы кнопка была поверх изображения */
 }
 
 .product-name { /* название товара */
