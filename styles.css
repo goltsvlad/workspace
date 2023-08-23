@@ -23,21 +23,9 @@ body {
     position: relative;
 }
 
-.product-image-container { /* контейнер для картинки товара */
-    position: relative;
-    display: inline-block; /* Чтобы контейнер подстраивался под размер изображения */
-}
-
 .product-image { /* картинка товара */
     width: 100%;
-    border-radius: 10px
-}
-
-.menu-button {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 2; /* Чтобы кнопка была поверх изображения */
+    border-radius: 10px;
 }
 
 .product-name { /* название товара */
@@ -58,7 +46,7 @@ body {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    /*display: flex;*/
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -109,10 +97,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh; /* Заменили height на min-height */
+    height: 100%; /* Здесь используется 100vh для высоты экрана */
     transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
     transform: translateY(100%); /* Начальное положение за пределами экрана */
-    z-index: 3; /* Установите значение, большее чем у .menu-button */
 }
 
 .cart-popup.show { /* показ окна корзины */
@@ -191,7 +178,7 @@ body {
     resize: vertical; /* Позволяет изменять размер вертикально */
 }
 
-/*#order-comment {
+#order-comment {
     width: 100%;
     font-size: 14px;
     /*padding: 10px; */
@@ -202,17 +189,4 @@ body {
     resize: vertical; /* Позволяет изменять размер вертикально 
     height: auto;
     /* min-height: 100px; /* Минимальная высота текстового поля
-}*/
-
-#order-comment {
-    position: absolute;
-    left: 0;
-    right: 0;
-    color: var(--tg-theme-hint-color, #ccc);
-    padding: 0 20px;
-    font-weight: normal;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    pointer-events: none;
 }
