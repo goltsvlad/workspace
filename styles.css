@@ -206,6 +206,10 @@ body {
     transform: translateY(100%); /* Начальное положение за пределами экрана */
 }
 
+.description-popup.show { /* показ окна корзины */
+    transform: translateY(0); /* Показать всплывающее окно */
+}
+
 .description-popup-content {
     position: absolute;
     top: 50%;
