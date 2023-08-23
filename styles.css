@@ -191,10 +191,10 @@ body {
     /* min-height: 100px; /* Минимальная высота текстового поля
 }
 
-/* Стили для всплывающего окна description*/
+/* Стили для всплывающего окна description */
 .description-popup {
     position: fixed;
-    bottom: 0;
+    top: 0; /* Изменили bottom на top */
     left: 0;
     right: 0;
     background-color: var(--tg-theme-secondary-bg-color);
@@ -202,17 +202,22 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%; /* Здесь используется 100vh для высоты экрана */
-    transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
-    transform: translateY(100%); /* Начальное положение за пределами экрана */
+    transition: transform 0.3s;
+    transform: translateY(-100%); /* Изменили на -100% */
+    overflow-y: auto; /* Добавили прокрутку */
 }
 
-.description-popup.show { /* показ окна корзины */
-    transform: translateY(0); /* Показать всплывающее окно */
+.description-popup.show {
+    transform: translateY(0);
 }
 
 .description-popup-content {
+    flex: 1; /* Занимает всю доступную высоту */
     display: flex;
-    overflow-y: auto;
+    flex-direction: column;
+    align-items: center; /* Центрируем контент по вертикали */
+    padding: 20px;
+    text-align: center;
 }
 
 .close-button {
