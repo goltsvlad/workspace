@@ -44,15 +44,20 @@ function loadProducts() {
   fetch('offers.json')
     .then(response => response.json())
     .then(data => {
-      products = data.map(item => ({
-        id: item.id,
-        name: item.name,
-        description: item.description, // Добавлено описание товара
-        price: item.price,
-        image: item.image,
-        count: 0
-      }));
-      renderProducts();
+      if (data.length === 0) {
+        console.warn('No products available.');
+        document.getElementById('no-products-message').style.display = 'block';
+      } else {
+        products = data.map(item => ({
+          id: item.id,
+          name: item.name,
+          description: item.description,
+          price: item.price,
+          image: item.image,
+          count: 0
+        }));
+        renderProducts();
+      }
     })
     .catch(error => console.error('Error loading products:', error));
 }
