@@ -113,7 +113,7 @@ function renderProducts() {
   }
 }
 
-function toggleDescriptionPopup(product.id) {
+function toggleDescriptionPopup(productId) {
   var descriptionPopup = document.getElementById('description-popup');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
