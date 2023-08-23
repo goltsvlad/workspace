@@ -100,7 +100,7 @@ function renderProducts() {
     // Добавь следующий код для добавления обработчика события на картинку товара
     var productImage = productElement.querySelector('.product-image');
     productImage.addEventListener('click', function() {
-      openProductModal(product);
+      toggleCartPopup();
     });
 
     productList.appendChild(productElement);
