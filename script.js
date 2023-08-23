@@ -1,7 +1,7 @@
 var tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.MainButton.text = 'Замовити';
+tg.MainButton.text = 'Замовити2';
 tg.MainButton.color = '#008000';
 
 
@@ -69,8 +69,8 @@ function renderProducts() {
           product.count > 0
             ? `<div class="count-badge">${product.count}</div>`
             : ''
+          <button class="menu-button" onclick="toggleDescription()">≡</button>
         }
-        <button class="menu-button" onclick="toggleDescription()">≡</button>
       </div>
       <div class="product-name">${product.name}</div>
       <div class="product-price">${product.price} рублей</div>
