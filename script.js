@@ -144,6 +144,14 @@ function openProductModal(product) {
   productModal.style.display = 'block';
 }
 
+function closeProductModal() {
+  var productModal = document.querySelector('.product-modal');
+  if (productModal) {
+    productModal.style.display = 'none';
+  }
+}
+
+
 function updateQuantity(id, amount) {
   var product = products.find(function(p) {
     return p.id === id;
