@@ -198,4 +198,4 @@ function toggleDescription () {
 }
   
 
-renderProducts();
+loadProducts();
