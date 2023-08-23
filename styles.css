@@ -23,16 +23,20 @@ body {
     position: relative;
 }
 
+.product-image-container { /* контейнер для картинки товара */
+    position: relative;
+    display: inline-block; /* Чтобы контейнер подстраивался под размер изображения */
+}
+
 .product-image { /* картинка товара */
     width: 100%;
-    border-radius: 10px;
-    position: relative; /* позволяет установить position: absolute; для кнопки меню */
+    border-radius: 10px
 }
 
 .menu-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 10px;
+    left: 10px;
     z-index: 1; /* Чтобы кнопка была поверх изображения */
 }
 
