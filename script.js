@@ -131,17 +131,16 @@ function toggleDescriptionPopup(productId) {
     
     descriptionPopup.classList.add('show');
     tg.BackButton.show();
-    var logOutput = document.getElementById('log-output');
-    // Перехватываем сообщения из консоли и выводим их в logOutput
-    var oldConsoleLog = console.log;
-    console.log = function(message) {
-      oldConsoleLog.apply(console, arguments); // Первоначальный вывод в консоль
-      logOutput.innerHTML += message + '<br>'; // Добавляем в logOutput
-    };
   }
 }
 
-
+var logOutput = document.getElementById('log-output');
+// Перехватываем сообщения из консоли и выводим их в logOutput
+var oldConsoleLog = console.log;
+console.log = function(message) {
+  oldConsoleLog.apply(console, arguments); // Первоначальный вывод в консоль
+  logOutput.innerHTML += message + '<br>'; // Добавляем в logOutput
+};
 
 
 
