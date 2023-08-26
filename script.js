@@ -131,13 +131,13 @@ function toggleDescriptionPopup(productId) {
     
     descriptionPopup.classList.add('show');
     tg.BackButton.show();
-    // Записать лог в элемент log-output
-    //var logOutput = document.getElementById('log-output');
-    //logOutput.innerHTML += `Description popup opened for product ID: ${productId}<br>`;
-    window.onerror = function(message, source, lineno, colno, error) {
-      var logOutput = document.getElementById('log-output');
-      logOutput.innerHTML += `Error: ${message} at line ${lineno}:${colno}<br>`;
-    }
+    var logOutput = document.getElementById('log-output');
+    // Перехватываем сообщения из консоли и выводим их в logOutput
+    var oldConsoleLog = console.log;
+    console.log = function(message) {
+      oldConsoleLog.apply(console, arguments); // Первоначальный вывод в консоль
+      logOutput.innerHTML += message + '<br>'; // Добавляем в logOutput
+    };
   }
 }
 
