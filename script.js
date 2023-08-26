@@ -134,6 +134,10 @@ function toggleDescriptionPopup(productId) {
     // Записать лог в элемент log-output
     //var logOutput = document.getElementById('log-output');
     //logOutput.innerHTML += `Description popup opened for product ID: ${productId}<br>`;
+    window.onerror = function(message, source, lineno, colno, error) {
+      var logOutput = document.getElementById('log-output');
+      logOutput.innerHTML += `Error: ${message} at line ${lineno}:${colno}<br>`;
+    }
   }
 }
 
