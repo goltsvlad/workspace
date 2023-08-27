@@ -140,6 +140,7 @@ function toggleDescriptionPopup(productId) {
     
     descriptionPopup.classList.add('show');
     tg.BackButton.show();
+    tg.MainButton.hide();
   }
 }
 
@@ -154,6 +155,10 @@ function toggleDescriptionPopup(productId) {
 function closeDescriptionPopup() {
   var DescriptionPopup = document.getElementById('description-popup');
   DescriptionPopup.classList.remove('show');
+  tg.BackButton.hide();
+  if (cart.length > 0) {
+    tg.MainButton.show();
+  } 
 }
 
 
