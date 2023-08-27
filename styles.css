@@ -193,16 +193,10 @@ body {
 
 /* Стили для всплывающего окна description */
 .description-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--tg-theme-secondary-bg-color);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
+    margin-top: 10px; /* Отступ для учета navbar */
+    margin: 10px; /* Отступ по краям */
 }
 
 .description-popup.show {
