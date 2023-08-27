@@ -205,6 +205,17 @@ body {
     z-index: 9999;
 }
 
+.description-popup::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9998; /* Перед модальным окном, но после обычного контента */
+}
+
 .description-popup.show {
     display: flex;
 }
