@@ -123,7 +123,7 @@ function renderProducts() {
 }
 
 function toggleDescriptionPopup(productId) {
-  window.location.href = 'description.html';
+  
   var descriptionPopup = document.getElementById('description-popup');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
