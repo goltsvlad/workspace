@@ -33,7 +33,16 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
   }
 });
 
-Telegram.WebApp.onEvent('backButtonClicked', closeCartPopup) 
+Telegram.WebApp.onEvent('backButtonClicked', function() {
+  var cartPopup = document.getElementById('cart-popup');
+  var descriptionPopup = document.getElementById('description-popup');
+
+  if (cartPopup.classList.contains('show')) {
+    closeCartPopup();
+  } else if (descriptionPopup.classList.contains('show')) {
+    closeDescriptionPopup();
+  }
+}); 
 
 
 // Загрузка данных из offers.json
@@ -134,14 +143,18 @@ function toggleDescriptionPopup(productId) {
   }
 }
 
-var logOutput = document.getElementById('log-output');
+//var logOutput = document.getElementById('log-output');
 // Перехватываем сообщения из консоли и выводим их в logOutput
-var oldConsoleLog = console.log;
-console.log = function(message) {
-  oldConsoleLog.apply(console, arguments); // Первоначальный вывод в консоль
-  logOutput.innerHTML += message + '<br>'; // Добавляем в logOutput
-};
+//var oldConsoleLog = console.log;
+//console.log = function(message) {
+  //oldConsoleLog.apply(console, arguments); // Первоначальный вывод в консоль
+  //logOutput.innerHTML += message + '<br>'; // Добавляем в logOutput
+//};
 
+function closeDescriptionPopup() {
+  var DescriptionPopup = document.getElementById('description-popup');
+  DescriptionPopup.classList.remove('show');
+}
 
 
 function updateQuantity(id, amount) {
