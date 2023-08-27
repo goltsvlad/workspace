@@ -204,7 +204,7 @@ body {
     align-items: center;
 }
 
-.description-popup.active {
+.description-popup.show {
     display: flex;
 }
 
