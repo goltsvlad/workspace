@@ -39,7 +39,7 @@ Telegram.WebApp.onEvent('backButtonClicked', function() {
 
   if (cartPopup.classList.contains('show')) {
     closeCartPopup();
-  } else if (descriptionPopup.classList.contains('show')) {
+  } else if (descriptionPopup.style.display === 'block') {
     closeDescriptionPopup();
   }
 }); 
