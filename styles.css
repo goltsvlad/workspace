@@ -199,29 +199,12 @@ body {
     margin: 10px; /* Отступ по краям */
 }
 
-.description-popup.show {
-    display: flex;
-}
 
 .description-popup-content {
-    /*flex: 1; /* Занимает всю доступную высоту */
-    display: flex;
-    flex-direction: column;
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
     color: orange;
-}
-
-.description-popup-content::before {
-  content: "";
-  position: absolute;
-  top: -10px; /* Прячем контент за верхней границей */
-  left: 0;
-  right: 0;
-  height: 10px;
-  background-color: white; /* Цвет фона контента */
-  z-index: -1;
 }
 
 .close-button {
