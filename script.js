@@ -157,8 +157,10 @@ function toggleDescriptionPopup(productId) {
 //};
 
 function closeDescriptionPopup() {
-  var DescriptionPopup = document.getElementById('description-popup');
-  DescriptionPopup.classList.remove('show');
+  var descriptionPopup = document.getElementById('description-popup');
+  var productList = document.getElementById('product-list');
+  productList.style.display = 'block';
+  descriptionPopup.style.display = 'none';
   tg.BackButton.hide();
   if (cart.length > 0) {
     tg.MainButton.show();
