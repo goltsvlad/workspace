@@ -125,6 +125,7 @@ function renderProducts() {
 function toggleDescriptionPopup(productId) {
   
   var descriptionPopup = document.getElementById('description-popup');
+  var productList = document.getElementById('product-list');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
     return p.id === productId;
@@ -139,7 +140,9 @@ function toggleDescriptionPopup(productId) {
       <div class="product-description">${product.description}</div>
     `;
     
-    descriptionPopup.classList.add('show');
+    //descriptionPopup.classList.add('show');
+    productList.style.display = 'none'; // Скрываем список товаров
+    descriptionPopup.style.display = 'block'; // Показываем описание товара
     tg.BackButton.show();
     tg.MainButton.hide();
   }
