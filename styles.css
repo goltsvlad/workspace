@@ -188,7 +188,7 @@ body {
     color: var(--tg-theme-text-color);
     resize: vertical; /* Позволяет изменять размер вертикально 
     height: auto;
-    /* min-height: 100px; /* Минимальная высота текстового поля
+    /* min-height: 100px; /* Минимальная высота текстового поля*/
 }
 
 /* Стили для всплывающего окна description */
