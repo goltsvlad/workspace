@@ -139,10 +139,9 @@ function toggleDescriptionPopup(productId) {
       <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
     `;
     
-    //productListContainer.style.display = 'none'; // Скрываем список товаров
     descriptionPopup.style.display = 'block'; // Показываем описание товара
     descriptionPopup.classList.add('animate-slide-up');
-    productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
+    //productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
     
     tg.BackButton.show();
     tg.MainButton.hide();
@@ -160,7 +159,7 @@ function toggleDescriptionPopup(productId) {
 function closeDescriptionPopup() {
   var descriptionPopup = document.getElementById('description-popup');
   //var productListContainer = document.getElementById('product-list');
-  productList.style.display = 'flex';
+  //productList.style.display = 'flex';
   descriptionPopup.style.display = 'none';
   descriptionPopup.classList.remove('animate-slide-up');
   tg.BackButton.hide();
