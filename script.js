@@ -4,9 +4,10 @@ tg.expand();
 tg.MainButton.text = 'Замовити';
 tg.MainButton.color = '#008000';
 
+var cartPopup = document.getElementById('cart-popup');
+var descriptionPopup = document.getElementById('description-popup');
 
-// Скрытие кнопки MainButton при загрузке страницы
-// tg.MainButton.hide();
+
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
   var cartPopup = document.getElementById('cart-popup');
@@ -34,8 +35,6 @@ Telegram.WebApp.onEvent('mainButtonClicked', function() {
 });
 
 Telegram.WebApp.onEvent('backButtonClicked', function() {
-  var cartPopup = document.getElementById('cart-popup');
-  var descriptionPopup = document.getElementById('description-popup');
 
   if (cartPopup.classList.contains('show')) {
     closeCartPopup();
