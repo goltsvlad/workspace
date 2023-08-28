@@ -33,7 +33,6 @@ body {
   100% {
     transform: translateY(-100%);
     opacity: 0;
-    display: none;
   }
 }
 
@@ -242,7 +241,7 @@ body {
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
-    color: orange;
+    color: green;
 }
 
 .close-description-button {
