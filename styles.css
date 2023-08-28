@@ -227,13 +227,14 @@ body {
 
 /* Стили для всплывающего окна description */
 .description-popup {
-    display: flex;
+    display: none;
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
     animation-duration: 0.9s; /* Длительность анимации */
     animation-timing-function: ease-in-out; /* Эффект анимации */
     animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
+    z-index: 1000;
 }
 
 
@@ -242,6 +243,7 @@ body {
     padding: 20px;
     text-align: center;
     color: green;
+    z-index: 1001;
 }
 
 .close-description-button {
