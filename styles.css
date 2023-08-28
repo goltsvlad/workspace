@@ -22,6 +22,10 @@ body {
   }
 }
 
+.animate-slide-up {
+  animation-name: slideUp;
+}
+
 .product-list { /* главный контейнер товара */
     display: flex;
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
@@ -220,7 +224,7 @@ body {
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
-    color: orange;
+    color: green;
 }
 
 .close-description-button {
