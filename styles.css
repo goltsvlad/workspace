@@ -9,6 +9,19 @@ body {
     color-scheme: var(--tg-color-scheme);
 }
 
+/* Анимация плавной смены видимости */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    display: block;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .product-list { /* главный контейнер товара */
     display: flex;
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
@@ -197,6 +210,9 @@ body {
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
+    animation-duration: 0.3s; /* Длительность анимации */
+    animation-timing-function: ease-in-out; /* Эффект анимации */
+    animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
 }
 
 
