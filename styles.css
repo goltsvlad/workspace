@@ -234,7 +234,6 @@ body {
     animation-duration: 0.9s; /* Длительность анимации */
     animation-timing-function: ease-in-out; /* Эффект анимации */
     animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
-    z-index: 1000;
 }
 
 
@@ -242,8 +241,7 @@ body {
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
-    color: green;
-    z-index: 1001;
+    color: orange;
 }
 
 .close-description-button {
