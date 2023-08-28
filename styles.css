@@ -45,9 +45,6 @@ body {
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
-    animation-duration: 0.9s; /* Длительность анимации */
-    animation-timing-function: ease-in-out; /* Эффект анимации */
-    animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
 }
 
 .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
@@ -231,7 +228,7 @@ body {
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
-    animation-duration: 0.9s; /* Длительность анимации */
+    animation-duration: 0.3s; /* Длительность анимации */
     animation-timing-function: ease-in-out; /* Эффект анимации */
     animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
 }
