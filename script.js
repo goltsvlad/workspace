@@ -143,7 +143,6 @@ function toggleDescriptionPopup(productId) {
     descriptionPopup.style.display = 'block'; // Показываем описание товара
     descriptionPopup.classList.add('animate-slide-up');
     productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
-    });
     tg.BackButton.show();
     tg.MainButton.hide();
   }
