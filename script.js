@@ -137,6 +137,7 @@ function toggleDescriptionPopup(productId) {
       </div>
       <div class="product-name">${product.name}</div>
       <div class="product-description">${product.description}</div>
+      <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
     `;
     
     //productListContainer.style.display = 'none'; // Скрываем список товаров
