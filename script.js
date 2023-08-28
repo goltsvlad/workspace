@@ -165,7 +165,7 @@ function closeDescriptionPopup() {
   
   descriptionPopup.style.display = 'none';
   descriptionPopup.classList.remove('animate-slide-up');
-  //productList.classList.remove('animate-slide-up-and-hide');
+  productList.classList.remove('animate-slide-up-and-hide');
   productList.style.display = 'flex';
   
   tg.BackButton.hide();
