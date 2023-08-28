@@ -162,7 +162,7 @@ function closeDescriptionPopup() {
   productList.style.display = 'flex';
   descriptionPopup.style.display = 'none';
   descriptionPopup.classList.remove('animate-slide-up');
-  //tg.BackButton.hide();
+  tg.BackButton.hide();
   if (cart.length > 0) {
     tg.MainButton.show();
   }
