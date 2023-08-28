@@ -139,12 +139,15 @@ function toggleDescriptionPopup(productId) {
       <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
     `;
     
-    //productList.classList.add('animate-slide-up-and-hide');
-    productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
-    descriptionPopup.style.display = 'block'; // Показываем описание товара
-    descriptionPopup.classList.add('animate-slide-up');
-    tg.BackButton.show();
-    tg.MainButton.hide();
+    productList.classList.add('animate-slide-up-and-hide');
+    
+    setTimeout(function() {
+      productList.style.display = 'none';
+      descriptionPopup.style.display = 'block'; // Показываем описание товара
+      descriptionPopup.classList.add('animate-slide-up');
+      tg.BackButton.show();
+      tg.MainButton.hide();
+    }, 1000); // Задержка в миллисекундах (1 секунда)
   }
 }
 
