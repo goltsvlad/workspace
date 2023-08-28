@@ -37,7 +37,7 @@ body {
 }
 
 .animate-slide-up-and-hide {
-  animation: slideUpAndHide 0.3s ease forwards;
+  animation: slideUpAndHide 0.9s ease forwards;
 }
 
 .product-list { /* главный контейнер товара */
@@ -238,7 +238,7 @@ body {
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
-    color: orange;
+    color: green;
 }
 
 .close-description-button {
