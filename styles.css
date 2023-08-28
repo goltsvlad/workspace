@@ -214,7 +214,7 @@ body {
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
-    animation-duration: 0.3s; /* Длительность анимации */
+    animation-duration: 0.2s; /* Длительность анимации */
     animation-timing-function: ease-in-out; /* Эффект анимации */
     animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
 }
@@ -224,7 +224,7 @@ body {
     align-items: center; /* Центрируем контент по вертикали */
     padding: 20px;
     text-align: center;
-    color: green;
+    color: orange;
 }
 
 .close-description-button {
