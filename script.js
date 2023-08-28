@@ -142,6 +142,7 @@ function toggleDescriptionPopup(productId) {
     //productListContainer.style.display = 'none'; // Скрываем список товаров
     productList.style.display = 'none'; // Скрываем список товаров
     descriptionPopup.style.display = 'block'; // Показываем описание товара
+    descriptionPopup.classList.add('animate-slide-up');
     tg.BackButton.show();
     tg.MainButton.hide();
   }
@@ -160,6 +161,7 @@ function closeDescriptionPopup() {
   //var productListContainer = document.getElementById('product-list');
   productList.style.display = 'flex';
   descriptionPopup.style.display = 'none';
+  descriptionPopup.classList.remove('animate-slide-up');
   //tg.BackButton.hide();
   if (cart.length > 0) {
     tg.MainButton.show();
