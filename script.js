@@ -158,17 +158,12 @@ function toggleDescriptionPopup(productId) {
 function closeDescriptionPopup() {
   var descriptionPopup = document.getElementById('description-popup');
   //var productListContainer = document.getElementById('product-list');
-  productList.style.display = 'block';
+  productList.style.display = 'flex';
   descriptionPopup.style.display = 'none';
-  tg.BackButton.hide();
+  //tg.BackButton.hide();
   if (cart.length > 0) {
     tg.MainButton.show();
   }
-  // Добавьте следующие строки для обновления раскладки списка товаров после показа
-  setTimeout(() => {
-    productList.style.display = 'flex';
-    renderProducts(); // Вызываем функцию для перерисовки товаров
-  }, 0);
 }
 
 
