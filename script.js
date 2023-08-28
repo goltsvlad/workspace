@@ -140,7 +140,7 @@ function toggleDescriptionPopup(productId) {
     `;
     
     //productList.classList.add('animate-slide-up-and-hide');
-    //productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
+    productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
     descriptionPopup.style.display = 'block'; // Показываем описание товара
     descriptionPopup.classList.add('animate-slide-up');
     tg.BackButton.show();
@@ -163,7 +163,7 @@ function closeDescriptionPopup() {
   descriptionPopup.style.display = 'none';
   descriptionPopup.classList.remove('animate-slide-up');
   //productList.classList.remove('animate-slide-up-and-hide');
-  //productList.style.display = 'flex';
+  productList.style.display = 'flex';
   
   tg.BackButton.hide();
   if (cart.length > 0) {
