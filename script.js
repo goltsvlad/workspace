@@ -39,7 +39,6 @@ Telegram.WebApp.onEvent('backButtonClicked', function() {
     closeCartPopup();
   } else if (descriptionPopup.style.display === 'block') {
     closeDescriptionPopup();
-    loadProducts();
   }
 }); 
 
@@ -164,7 +163,12 @@ function closeDescriptionPopup() {
   tg.BackButton.hide();
   if (cart.length > 0) {
     tg.MainButton.show();
-  } 
+  }
+  // Добавьте следующие строки для обновления раскладки списка товаров после показа
+  setTimeout(() => {
+    productList.style.display = 'flex';
+    renderProducts(); // Вызываем функцию для перерисовки товаров
+  }, 0);
 }
 
 
