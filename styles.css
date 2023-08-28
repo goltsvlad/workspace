@@ -25,11 +25,30 @@ body {
   animation-name: slideUp;
 }
 
+@keyframes slideUpAndHide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animate-slide-up-and-hide {
+  animation: slideUpAndHide 0.3s ease forwards;
+}
+
 .product-list { /* главный контейнер товара */
     display: flex;
     flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
     margin-top: 10px; /* Отступ для учета navbar */
     margin: 10px; /* Отступ по краям */
+    animation-duration: 0.9s; /* Длительность анимации */
+    animation-timing-function: ease-in-out; /* Эффект анимации */
+    animation-fill-mode: forwards; /* Сохранение последнего кадра анимации */
 }
 
 .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
