@@ -147,7 +147,7 @@ function toggleDescriptionPopup(productId) {
       descriptionPopup.classList.add('animate-slide-up');
       tg.BackButton.show();
       tg.MainButton.hide();
-    }, 100); // Задержка в миллисекундах
+    }, 350); // Задержка в миллисекундах
   }
 }
 
