@@ -142,13 +142,8 @@ function toggleDescriptionPopup(productId) {
     //productListContainer.style.display = 'none'; // Скрываем список товаров
     descriptionPopup.style.display = 'block'; // Показываем описание товара
     descriptionPopup.classList.add('animate-slide-up');
-    //productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
-    // Добавляем обработчик события animationend
-    descriptionPopup.addEventListener('animationend', function() {
-      // Этот код выполнится после завершения анимации slide-up
-      productList.style.display = 'none'; // Скрываем список товаров
-      descriptionPopup.removeEventListener('animationend', arguments.callee); // Удаляем обработчик, чтобы избежать повторного выполнения
-    });
+    productList.style.display = 'none'; // Скрываем список товаров после завершения анимации
+    
     tg.BackButton.show();
     tg.MainButton.hide();
   }
