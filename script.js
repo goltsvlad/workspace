@@ -120,10 +120,10 @@ function renderProducts() {
   }
 }
 
+var currentProductIndex = -1;
 function toggleDescriptionPopup(productId) {
   
   var descriptionPopup = document.getElementById('description-popup');
-  // var productListContainer = document.getElementById('product-list');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
     return p.id === productId;
@@ -138,7 +138,13 @@ function toggleDescriptionPopup(productId) {
       <div class="product-description">${product.description}</div>
       <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
     `;
-    
+    if (currentProductIndex === -1) {
+      currentProductIndex = products.findIndex(function(p) {
+        return p.id === productId;
+      });
+      descriptionPopup.addEventListener('swipeleft', showNextProduct);
+      descriptionPopup.addEventListener('swiperight', showPreviousProduct);
+    }
     productList.classList.add('animate-slide-up-and-hide');
     
     setTimeout(function() {
@@ -149,6 +155,25 @@ function toggleDescriptionPopup(productId) {
       tg.MainButton.hide();
     }, 500); // Задержка в миллисекундах
   }
+}
+
+function showPreviousProduct() {
+  if (currentProductIndex > 0) {
+    currentProductIndex--;
+    showProductByIndex(currentProductIndex);
+  }
+}
+
+function showNextProduct() {
+  if (currentProductIndex < products.length - 1) {
+    currentProductIndex++;
+    showProductByIndex(currentProductIndex);
+  }
+}
+
+function showProductByIndex(index) {
+  var product = products[index];
+  // Ваш код для обновления контента описания товара
 }
 
 //var logOutput = document.getElementById('log-output');
