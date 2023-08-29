@@ -122,7 +122,6 @@ function renderProducts() {
 
 var currentProductIndex = -1;
 function toggleDescriptionPopup(productId) {
-  
   var descriptionPopup = document.getElementById('description-popup');
   var descriptionPopupContent = document.querySelector('.description-popup-content');
   var product = products.find(function(p) {
@@ -138,13 +137,17 @@ function toggleDescriptionPopup(productId) {
       <div class="product-description">${product.description}</div>
       <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
     `;
+
     if (currentProductIndex === -1) {
       currentProductIndex = products.findIndex(function(p) {
         return p.id === productId;
       });
-      descriptionPopup.addEventListener('swipeleft', showNextProduct);
-      descriptionPopup.addEventListener('swiperight', showPreviousProduct);
+
+      var hammer = new Hammer(descriptionPopup);
+      hammer.on('swipeleft', showNextProduct);
+      hammer.on('swiperight', showPreviousProduct);
     }
+
     productList.classList.add('animate-slide-up-and-hide');
     
     setTimeout(function() {
@@ -169,11 +172,6 @@ function showNextProduct() {
     currentProductIndex++;
     showProductByIndex(currentProductIndex);
   }
-}
-
-function showProductByIndex(index) {
-  var product = products[index];
-  // Ваш код для обновления контента описания товара
 }
 
 //var logOutput = document.getElementById('log-output');
