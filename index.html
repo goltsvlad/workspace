@@ -347,7 +347,7 @@
           return sum + item.price * item.count;
         }, 0);
 
-        var orderComment = document.getElementById('order-comment').value;
+        var orderComment = document.querySelector('.comment-input').value;
         var commentText = orderComment ? 'Коментар: ' + orderComment + '\n' : ''; // Проверка наличия комментария
     
         var data = 'Замовлення:\n' + cartData + '\n' + commentText + 'Сума: ' + total.toString() + '₴.';
