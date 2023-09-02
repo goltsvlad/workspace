@@ -262,7 +262,7 @@
         color: white;
         background-color: var(--tg-theme-bg-color);
         align-items: center;
-        padding: 20px 10px;
+        padding: 10px 20px;
     }
 
     .cart-item-image {
@@ -586,10 +586,10 @@
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
-      //setTimeout(function() {
-      productList.style.display = 'none';
-      cartPopup.style.position = 'relative';
-     // }, 300)
+      requestAnimationFrame(function() {
+        productList.style.display = 'none';
+        cartPopup.style.position = 'relative';
+      });
 
       var totalAmount = cart.reduce(function (sum, item) {
         return sum + item.price * item.count;
