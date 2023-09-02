@@ -25,12 +25,12 @@
     body {
       font-family: 'Roboto Flex', sans-serif;
       font-weight: normal; /* Regular */
-      background-color: white;
-      color: orange;
+      background-color: var(--tg-theme-bg-color);
+      color: var(--tg-theme-text-color);
       font-size: 14px;
       margin: 0;
       padding: 0;
-      
+      color-scheme: var(--tg-color-scheme);
     }
 
     /* Анимация плавной смены видимости */
@@ -184,7 +184,9 @@
         background-color: orange;
         display: flex;
         flex-direction: column;
+        width: 100%;
         height: 100%; /* Здесь используется 100vh для высоты экрана */
+        overflow: hidden;
         transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
         transform: translateY(100%);
     }
@@ -199,6 +201,7 @@
         padding: 20px;
         text-align: center;
         color: green;
+        overflow: hidden;
     }
 
     .close-description-button {
