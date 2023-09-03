@@ -593,11 +593,12 @@
       
       Telegram.WebApp.setHeaderColor('bg_color');
       Telegram.WebApp.setBackgroundColor('secondary_bg_color');
-      body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
+      
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
       setTimeout(function() {
+        body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
         productList.style.display = 'none';
         cartPopup.style.position = 'relative';
         
