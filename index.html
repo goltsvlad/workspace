@@ -203,6 +203,33 @@
         overflow: hidden;
     }
 
+    .product-image-container {
+        position: relative;
+    }
+
+    .prev-product-button,
+    .next-product-button {
+        position: absolute;
+        top: 50%; /* Разместите по вертикали в центре контейнера */
+        font-size: 24px;
+        cursor: pointer;
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prev-product-button {
+        left: 0; /* Разместите кнопку "назад" слева от картинки */
+    }
+    .next-product-button {
+        right: 0; /* Разместите кнопку "вперед" справа от картинки */
+    }
+
     .close-description-button {
         position: absolute;
         top: 10px;
@@ -218,37 +245,6 @@
         align-items: center;
         justify-content: center;
     }
-
-    .prev-product-button {
-        position: absolute;
-        top: 10px;
-        left: 50px;
-        font-size: 24px;
-        cursor: pointer;
-        background-color: var(--tg-theme-secondary-bg-color);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        opacity: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .next-product-button {
-        position: absolute;
-        top: 10px;
-        right: 50px;
-        font-size: 24px;
-        cursor: pointer;
-        background-color: var(--tg-theme-secondary-bg-color);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        opacity: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     
     .cart-popup { /* окно корзины */
         position: fixed;
