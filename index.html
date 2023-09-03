@@ -312,6 +312,12 @@
         box-sizing: border-box;
         border-radius: 0;
     }
+
+    .comment-helper-text {
+        color: orange; /* Серый цвет текста */
+        font-size: 12px; /* Размер шрифта */
+        margin-top: 5px; /* Отступ от поля ввода */
+    }
         
   </style>
 </head>
@@ -650,6 +656,7 @@
       commentBlock.classList.add('comment-block');
       commentBlock.innerHTML = `
         <textarea class="comment-input" rows="1" placeholder="Коментар..."></textarea>
+        <div class="comment-helper-text">Ваш коментар</div> <!-- Добавляем элемент .comment-helper-text -->
       `;
 
       cartPopupContent.appendChild(commentBlock);
