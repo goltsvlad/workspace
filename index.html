@@ -584,7 +584,7 @@
     function toggleCartPopup() {
       
       //Telegram.WebApp.setHeaderColor('bg_color');
-      //Telegram.WebApp.setBackgroundColor('secondary_bg_color');
+      Telegram.WebApp.setBackgroundColor('secondary_bg_color');
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
@@ -603,7 +603,7 @@
     function closeCartPopup() {
 
       //Telegram.WebApp.setHeaderColor('bg_color');
-      //Telegram.WebApp.setBackgroundColor('bg_color');
+      Telegram.WebApp.setBackgroundColor('bg_color');
       cartPopup.classList.remove('show');
       cartPopup.style.position = 'fixed';
       productList.style.display = 'flex';
