@@ -337,6 +337,7 @@
     }
 
     .comment-input {
+        background-color: var(--tg-theme-bg-color);
         width: 100%;
         padding: 10px 20px;
         border: none;
@@ -543,6 +544,12 @@
         descriptionPopupContent.classList.add('animate-out-left'); // Добавляем класc
         currentOpenProductIndex += 1; // Передвигаем индекс текущего открытого товара
         toggleDescriptionPopup(products[currentOpenProductIndex].id, 'left');
+      } else {
+        // Если это последний товар, скрываем кнопку "вперед"
+        var nextButton = document.querySelector('.next-product-button');
+        if (nextButton) {
+          nextButton.style.display = 'none';
+        }
       }
     }
 
@@ -552,6 +559,12 @@
         descriptionPopupContent.classList.add('animate-out-right'); // Добавляем класс 
         currentOpenProductIndex -= 1; // Передвигаем индекс текущего открытого товара
         toggleDescriptionPopup(products[currentOpenProductIndex].id, 'right');
+      } else {
+        // Если это первый товар, скрываем кнопку "назад"
+        var prevButton = document.querySelector('.prev-product-button');
+        if (prevButton) {
+          prevButton.style.display = 'none';
+        }
       }
     }
 
