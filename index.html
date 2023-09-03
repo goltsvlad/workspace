@@ -606,6 +606,7 @@
     function closeCartPopup() {
 
       //Telegram.WebApp.setHeaderColor('bg_color');
+      body.style.backgroundColor = 'var(--tg-theme-bg-color)';
       Telegram.WebApp.setBackgroundColor('bg_color');
       cartPopup.classList.remove('show');
       cartPopup.style.position = 'fixed';
