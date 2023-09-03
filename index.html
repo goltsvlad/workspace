@@ -580,12 +580,13 @@
     });
     
     var cartPopup = document.getElementById('cart-popup');
+    var body = document.body;
     
     function toggleCartPopup() {
       
       Telegram.WebApp.setHeaderColor('bg_color');
       Telegram.WebApp.setBackgroundColor('secondary_bg_color');
-      cartPopup.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
+      body.style.backgroundColor = 'green';
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
