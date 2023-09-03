@@ -209,7 +209,23 @@
         right: 10px;
         font-size: 24px;
         cursor: pointer;
-        background-color: var(--tg-theme-bg-color);
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prev-product-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -476,6 +492,8 @@
         descriptionPopupContent.innerHTML = `
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
+            <div class="prev-product-button" onclick="showPreviousProduct()">&lt;</div>
+            <div class="next-product-button" onclick="showNextProduct()">&gt;</div>
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
