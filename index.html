@@ -544,11 +544,19 @@
         descriptionPopupContent.classList.add('animate-out-left'); // Добавляем класc
         currentOpenProductIndex += 1; // Передвигаем индекс текущего открытого товара
         toggleDescriptionPopup(products[currentOpenProductIndex].id, 'left');
-      } else {
-        // Если это последний товар, скрываем кнопку "вперед"
-        var nextButton = document.querySelector('.next-product-button');
-        if (nextButton) {
-          nextButton.style.display = 'none';
+
+        // Проверяем, является ли текущий товар последним, и скрываем кнопку "вперед"
+        if (currentOpenProductIndex === products.length - 1) {
+          var nextButton = document.querySelector('.next-product-button');
+          if (nextButton) {
+            nextButton.style.display = 'none';
+          }
+        }
+    
+        // Показываем кнопку "назад" после перемотки, если она была скрыта
+        var prevButton = document.querySelector('.prev-product-button');
+        if (prevButton) {
+          prevButton.style.display = 'block';
         }
       }
     }
@@ -559,11 +567,19 @@
         descriptionPopupContent.classList.add('animate-out-right'); // Добавляем класс 
         currentOpenProductIndex -= 1; // Передвигаем индекс текущего открытого товара
         toggleDescriptionPopup(products[currentOpenProductIndex].id, 'right');
-      } else {
-        // Если это первый товар, скрываем кнопку "назад"
-        var prevButton = document.querySelector('.prev-product-button');
-        if (prevButton) {
-          prevButton.style.display = 'none';
+
+        // Проверяем, является ли текущий товар первым, и скрываем кнопку "назад"
+        if (currentOpenProductIndex === 0) {
+          var prevButton = document.querySelector('.prev-product-button');
+          if (prevButton) {
+            prevButton.style.display = 'none';
+          }
+        }
+    
+        // Показываем кнопку "вперед" после перемотки, если она была скрыта
+        var nextButton = document.querySelector('.next-product-button');
+        if (nextButton) {
+          nextButton.style.display = 'block';
         }
       }
     }
