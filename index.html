@@ -25,7 +25,7 @@
     body {
       font-family: 'Roboto Flex', sans-serif;
       font-weight: normal; /* Regular */
-      background-color: var(--tg-theme-secondary-bg-color);
+      background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
       font-size: 14px;
       margin: 0;
@@ -583,8 +583,9 @@
     
     function toggleCartPopup() {
       
-      //Telegram.WebApp.setHeaderColor('bg_color');
+      Telegram.WebApp.setHeaderColor('bg_color');
       Telegram.WebApp.setBackgroundColor('secondary_bg_color');
+      cartPopup.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
