@@ -295,15 +295,8 @@
     }
 
     .comment-block {
-        background-color: var(--tg-theme-secondary-bg-color);
-        width: 100%;
-        padding: 10px;
-        margin: 20px;
-        transition: margin 0.5s ease;
-    }
-
-    .comment-block:hover {
-        margin: 10px 20px;
+        background-color: grey;
+        padding: 10px 0;
     }
 
     .comment-input {
@@ -314,7 +307,10 @@
         font-size: 16px;
         resize: none;
         overflow: hidden; /* Предотвращаем появление полос прокрутки */
-        }
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+        
   </style>
 </head>
 <body>
@@ -328,7 +324,7 @@
     <div class="description-popup-content">
     </div>
   </div>
-  <!-- <button class="add-to-cart-button" onclick="toggleCartPopup()">В корзину</button>  -->
+  <button class="add-to-cart-button" onclick="toggleCartPopup()">В корзину</button>
   <script>
     var tg = window.Telegram.WebApp;
 
@@ -585,6 +581,7 @@
     
     function toggleCartPopup() {
       
+      Telegram.WebApp.setHeaderColor('secondary_bg_color');
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
