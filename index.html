@@ -226,7 +226,12 @@
     }
 
     .cart-popup.show { /* показ окна корзины */
+        background-color: green;
         transform: translateY(0); /* Показать всплывающее окно */
+    }
+
+    .cart-popup.show + body {
+        background-color: green; /* Устанавливаем зеленый цвет фона для body при открытом окне корзины */
     }
     
     .cart-popup-header { /* контейнер Заголовка окна корзины */
