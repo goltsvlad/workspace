@@ -633,7 +633,7 @@
       startY = event.touches[0].clientY;
     });
     
-    var minSwipeDistance = 100; // Минимальное расстояние свайпа в пикселях
+    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
 
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
@@ -663,6 +663,7 @@
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
+      scrollToTop();
       
       setTimeout(function() {
         body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
@@ -675,6 +676,10 @@
         return sum + item.price * item.count;
       }, 0);
       tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Плавно переместить фокус вверх
     }
     
       
