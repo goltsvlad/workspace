@@ -612,12 +612,13 @@
     //СВАЙПЫ
     var startX;
     var startY;
-    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
 
     descriptionPopupContent.addEventListener('touchstart', function(event) {
       startX = event.touches[0].clientX;
       startY = event.touches[0].clientY;
     });
+    
+    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
 
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
@@ -628,25 +629,13 @@
 
         if (deltaX > 0 && currentOpenProductIndex > 0) {
           // Свайп вправо, если не первый продукт
-          showHalfAnimation('left', 'animate-on-left-half');
+          showProduct('right');
         } else if (deltaX < 0 && currentOpenProductIndex < products.length - 1) {
           // Свайп влево, если не последний продукт
-          showHalfAnimation('right', 'animate-on-right-half');
+          showProduct('left');
         }
       }
     });
-
-    function showHalfAnimation(direction, animationClass) {
-      if (direction && animationClass) {
-        // Добавляем класс анимации наполовину
-        descriptionPopupContent.classList.add(animationClass);
-        setTimeout(function() {
-          // Убираем класс анимации через 300 миллисекунд
-          descriptionPopupContent.classList.remove(animationClass);
-          showProduct(direction); // Вызываем функцию showProduct после анимации
-        }, 300);
-      }
-    }
 
     
     var cartPopup = document.getElementById('cart-popup');
