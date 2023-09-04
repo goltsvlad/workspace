@@ -617,7 +617,8 @@
     });
     
     var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
-
+    var isAnimationAttempted = false; // Переменная для отслеживания попытки анимации
+    
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
       var deltaY = event.touches[0].clientY - startY;
@@ -631,9 +632,20 @@
         } else if (deltaX < 0 && currentOpenProductIndex < products.length - 1) {
           // Свайп влево, если не последний продукт
           showProduct('left');
+        } else {
+          // Крайний продукт, "попытка" анимации
+          isAnimationAttempted = true;
         }
       }
     });
+
+descriptionPopupContent.addEventListener('touchend', function(event) {
+  if (isAnimationAttempted) {
+    // Если была "попытка" анимации, сбрасываем ее и запускаем анимацию обратно
+    isAnimationAttempted = false;
+    showProduct(deltaX < 0 ? 'right' : 'left');
+  }
+});
     
     var cartPopup = document.getElementById('cart-popup');
     var body = document.body;
