@@ -663,8 +663,9 @@
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
+      body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
       setTimeout(function() {
-        body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
+        
         productList.style.display = 'none';
         cartPopup.style.position = 'relative';
         
