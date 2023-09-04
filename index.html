@@ -168,7 +168,7 @@
         border: none;
         font-size: 14px;
         font-weight: 500;
-        padding: 5px;
+        padding: 10px;
         cursor: pointer;
         width: 100%;
         margin: 0 auto;
@@ -473,7 +473,7 @@
                   <div class="count-badge">${product.count}</div>
                   <button class="quantity-button" onclick="updateQuantity(${product.id}, 1)">+</button>
                 `
-                : `<button class="add-to-cart-button" onclick="updateQuantity(${product.id}, 1)">У кошик</button>`
+                : `<button class="add-to-cart-button" onclick="updateQuantity(${product.id}, 1)">До кошику</button>`
             }
           </div>
         `;
@@ -600,13 +600,9 @@
         var prevButton = document.querySelector('.prev-product-button');
         var nextButton = document.querySelector('.next-product-button');
 
-        // Проверяем текущий индекс и скрываем/показываем соответствующую кнопку
         if (prevButton && nextButton) {
-          if (currentOpenProductIndex === 0) {
-            prevButton.style.display = 'none'; // Скрываем кнопку "prev product button", если первый товар уже открыт
-          } else if (currentOpenProductIndex === products.length - 1) {
-            nextButton.style.display = 'none'; // Скрываем кнопку "next product button", если последний товар уже открыт
-          }
+          prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
+          nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
         }
       }
     }
