@@ -517,7 +517,14 @@
         currentOpenProductIndex = products.findIndex(function(p) {
           return p.id === productId;
         });
-    
+
+        var prevButton = document.querySelector('.prev-product-button');
+        var nextButton = document.querySelector('.next-product-button');
+
+        if (prevButton && nextButton) {
+          prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
+          nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
+        }
         
         descriptionPopup.classList.add('show');
         tg.BackButton.show();
@@ -596,14 +603,6 @@
         }
 
         toggleDescriptionPopup(products[currentOpenProductIndex].id, direction);
-
-        var prevButton = document.querySelector('.prev-product-button');
-        var nextButton = document.querySelector('.next-product-button');
-
-        if (prevButton && nextButton) {
-          prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
-          nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
-        }
       }
     }
 
