@@ -639,13 +639,13 @@
       }
     });
 
-descriptionPopupContent.addEventListener('touchend', function(event) {
-  if (isAnimationAttempted) {
-    // Если была "попытка" анимации, сбрасываем ее и запускаем анимацию обратно
-    isAnimationAttempted = false;
-    showProduct(deltaX < 0 ? 'right' : 'left');
-  }
-});
+    descriptionPopupContent.addEventListener('touchend', function(event) {
+      if (isAnimationAttempted) {
+        // Если была "попытка" анимации, сбрасываем ее и запускаем анимацию обратно
+        isAnimationAttempted = false;
+        showProduct(deltaX < 0 ? 'right' : 'left');
+      }
+    });
     
     var cartPopup = document.getElementById('cart-popup');
     var body = document.body;
