@@ -565,14 +565,14 @@
       }
     }
 
-// Проверка и установка видимости кнопок при загрузке страницы
-var prevButton = document.querySelector('.prev-product-button');
-var nextButton = document.querySelector('.next-product-button');
+    // Проверка и установка видимости кнопок при загрузке страницы
+    var prevButton = document.querySelector('.prev-product-button');
+    var nextButton = document.querySelector('.next-product-button');
 
-if (prevButton && nextButton) {
-  prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
-  nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
-}
+    if (prevButton && nextButton) {
+      prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
+      nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
+    }
 
     function closeDescriptionPopup() {
   
