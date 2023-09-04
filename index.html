@@ -265,12 +265,12 @@
     }
     
     .cart-popup-header { /* контейнер Заголовка окна корзины */
-        display: none;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
         background-color: var(--tg-theme-bg-color);
-        overflow-y: auto;
+        /*overflow-y: auto;*/
     }
 
     .cart-popup-title { /* текст заголовка окна корзины */
@@ -622,10 +622,10 @@
 
         if (deltaX > 0) {
           // Свайп вправо
-          showPreviousProduct();
+          showProduct('right');
         } else {
           // Свайп влево
-          showNextProduct();
+          showProduct('right');
         }
       }
     });
@@ -641,10 +641,10 @@
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
-      body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
+      
       
       setTimeout(function() {
-        
+        body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
         productList.style.display = 'none';
         cartPopup.style.position = 'relative';
         scrollToTop();
