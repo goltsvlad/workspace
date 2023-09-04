@@ -24,7 +24,7 @@
   <style>
     body {
       font-family: 'Roboto Flex', sans-serif;
-      font-weight: 500; /* Regular */
+      font-weight: 500; /* medium */
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
       font-size: 14px;
@@ -147,6 +147,8 @@
 
     .quantity-button { /* кнопки + и - */
         background-color: #F8A917;
+        font-size: 16px;
+        font-weight: 500;
         color: white;
         border: none;
         padding: 10px;
@@ -166,6 +168,7 @@
         color: white;
         border: none;
         font-size: 12px;
+        font-weight: 500;
         padding: 10px;
         cursor: pointer;
         width: 100%;
@@ -540,11 +543,16 @@
 
     function showProduct(direction) {
       if (currentOpenProductIndex !== -1) {
+        descriptionPopupContent.classList.remove('animate-on-left', 'animate-on-right');
         var animationClass = direction === 'left' ? 'animate-out-left' : 'animate-out-right';
-        descriptionPopupContent.classList.remove('animate-on-left', 'animate-on-right', animationClass);
         descriptionPopupContent.classList.add(animationClass);
 
-        currentOpenProductIndex += direction === 'left' ? 1 : -1;
+        if (direction === 'left' && currentOpenProductIndex < products.length - 1) {
+          currentOpenProductIndex += 1;
+        } else if (direction === 'right' && currentOpenProductIndex > 0) {
+          currentOpenProductIndex -= 1;
+        }
+
         toggleDescriptionPopup(products[currentOpenProductIndex].id, direction);
 
         var prevButton = document.querySelector('.prev-product-button');
@@ -556,6 +564,15 @@
         }
       }
     }
+
+// Проверка и установка видимости кнопок при загрузке страницы
+var prevButton = document.querySelector('.prev-product-button');
+var nextButton = document.querySelector('.next-product-button');
+
+if (prevButton && nextButton) {
+  prevButton.style.display = currentOpenProductIndex > 0 ? 'block' : 'none';
+  nextButton.style.display = currentOpenProductIndex < products.length - 1 ? 'block' : 'none';
+}
 
     function closeDescriptionPopup() {
   
