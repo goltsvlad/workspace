@@ -504,8 +504,8 @@
         descriptionPopupContent.innerHTML = `
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
-            <div class="prev-product-button" onclick="showProduct('left')">&lt;</div>
-            <div class="next-product-button" onclick="showProduct('right')">&gt;</div>
+            <div class="prev-product-button" onclick="showProduct('right')">&lt;</div>
+            <div class="next-product-button" onclick="showProduct('left')">&gt;</div>
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
@@ -641,9 +641,10 @@
       tg.BackButton.show();
       updateCartPopup();
       cartPopup.classList.add('show');
+      body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
       
       setTimeout(function() {
-        //body.style.backgroundColor = 'var(--tg-theme-secondary-bg-color)';
+        
         productList.style.display = 'none';
         cartPopup.style.position = 'relative';
         scrollToTop();
