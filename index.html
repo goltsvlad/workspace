@@ -275,7 +275,7 @@
 
     .cart-popup-title { /* текст заголовка окна корзины */
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 600; /* Устанавливаем полужирное начертание (SemiBold) */
         color: var(--tg-theme-text-color);
         
     }
@@ -470,7 +470,7 @@
                   <div class="count-badge">${product.count}</div>
                   <button class="quantity-button" onclick="updateQuantity(${product.id}, 1)">+</button>
                 `
-                : `<button class="add-to-cart-button" onclick="updateQuantity(${product.id}, 1)">В корзину</button>`
+                : `<button class="add-to-cart-button" onclick="updateQuantity(${product.id}, 1)">У кошик</button>`
             }
           </div>
         `;
@@ -677,7 +677,7 @@
       var cartPopupHeader = document.createElement('div');
       cartPopupHeader.classList.add('cart-popup-header');
       cartPopupHeader.innerHTML = `
-        <div class="cart-popup-title">Кошик</div>
+        <div class="cart-popup-title">Ваше замовлення</div>
         <div class="edit-button" onclick="closeCartPopup()">Ред.</div>
       `;
 
