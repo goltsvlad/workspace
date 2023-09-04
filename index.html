@@ -610,15 +610,15 @@
     //СВАЙПЫ
     var startX;
     var startY;
+    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
+    var isAnimationAttempted = false; // Переменная для отслеживания попытки анимации
+    var attemptedDirection = ''; // Переменная для сохранения направления "попытки" анимации
 
     descriptionPopupContent.addEventListener('touchstart', function(event) {
       startX = event.touches[0].clientX;
       startY = event.touches[0].clientY;
     });
-    
-    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
-    var isAnimationAttempted = false; // Переменная для отслеживания попытки анимации
-    
+
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
       var deltaY = event.touches[0].clientY - startY;
@@ -635,6 +635,7 @@
         } else {
           // Крайний продукт, "попытка" анимации
           isAnimationAttempted = true;
+          attemptedDirection = deltaX < 0 ? 'right' : 'left'; // Сохраняем направление "попытки" анимации
         }
       }
     });
@@ -643,9 +644,10 @@
       if (isAnimationAttempted) {
         // Если была "попытка" анимации, сбрасываем ее и запускаем анимацию обратно
         isAnimationAttempted = false;
-        showProduct(deltaX < 0 ? 'right' : 'left');
+        showProduct(attemptedDirection); // Используем сохраненное направление
       }
     });
+
     
     var cartPopup = document.getElementById('cart-popup');
     var body = document.body;
