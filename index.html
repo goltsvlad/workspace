@@ -324,7 +324,7 @@
     }
 
     .cart-item-count {
-        font-weight: 500;
+        font-weight: 600;
         color: #F8A917; /* Зелёный цвет для количества */
         margin-left: 10px;
     }
@@ -625,11 +625,11 @@
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
         event.preventDefault(); // Предотвращаем прокрутку страницы в случае горизонтального свайпа
 
-        if (deltaX > 0) {
-          // Свайп вправо
+        if (deltaX > 0 && currentOpenProductIndex > 0) {
+          // Свайп вправо, если не первый продукт
           showProduct('right');
-        } else {
-          // Свайп влево
+        } else if (deltaX < 0 && currentOpenProductIndex < products.length - 1) {
+          // Свайп влево, если не последний продукт
           showProduct('left');
         }
       }
