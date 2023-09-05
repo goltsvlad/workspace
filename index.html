@@ -778,12 +778,15 @@
           if (Math.abs(currentX) >= itemWidth * 0.9) {
             // Если элемент сдвинулся на 90% от своей ширины или больше,
             // выполняем удаление
-            item.style.transform = '';
-
             removeItemFromCartById(product.id);
           } else {
             // В противном случае возвращаем элемент на место
+            item.style.transition = 'transform 0.3s'; // Добавляем анимацию только для возврата
             item.style.transform = 'translateX(0)';
+            setTimeout(function() {
+              item.style.transform = '';
+              item.style.transition = ''; // Сбрасываем анимацию
+            }, 300);
           }
         }
       });
