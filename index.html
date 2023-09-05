@@ -663,7 +663,7 @@
       var totalAmount = cart.reduce(function (sum, item) {
         return sum + item.price * item.count;
       }, 0);
-      tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
+      
     }
 
     function scrollToTop() {
@@ -684,6 +684,7 @@
     }
     
     function updateCartPopup() {
+      tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
       
       var cartPopupContent = document.querySelector('.cart-popup-content');
       cartPopupContent.innerHTML = ''; // Очищаем содержимое перед заполнением
@@ -772,13 +773,19 @@
         if (isSwiping) {
           // Если пользователь завершил свайп (перетаскивание)
 
-          // Возвращаем элемент в исходное положение
-          item.style.transform = '';
+          // Проверяем, насколько далеко сдвинулся элемент
+          var currentX = parseInt(getComputedStyle(item).transform.split(',')[4]);
 
-          removeItemFromCartById(product.id);
-          console.log(product.id)
-          console.log(item)
-          
+          if (Math.abs(currentX) >= itemWidth * 0.9) {
+            // Если элемент сдвинулся на 90% от своей ширины или больше,
+            // выполняем удаление
+            item.style.transform = '';
+
+            removeItemFromCartById(product.id);
+          } else {
+            // В противном случае возвращаем элемент на место
+            item.style.transform = 'translateX(0)';
+          }
         }
       });
     }
