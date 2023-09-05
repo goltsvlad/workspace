@@ -711,6 +711,7 @@
         `;
 
         cartPopupContent.appendChild(itemBlock);
+        addSwipeToDeleteHandler(itemBlock, item); //Передаем блок и обьект на обрабутку свайпов.
       });
 
       // Добавляем блок с комментарием под товарами
@@ -740,6 +741,66 @@
         }
       });
     };
+
+    // Обработчик касания для элемента товара в корзине
+    function addSwipeToDeleteHandler(item, product) {
+      var startX;
+      var itemWidth = item.offsetWidth;
+      var isSwiping = false;
+
+      item.addEventListener('touchstart', function (event) {
+        startX = event.touches[0].clientX;
+        isSwiping = false;
+      });
+
+      item.addEventListener('touchmove', function (event) {
+        var deltaX = event.touches[0].clientX - startX;
+    
+        // Если перемещение происходит влево
+        if (deltaX < 0) {
+          isSwiping = true;
+      
+          // Отменяем стандартное поведение браузера
+          event.preventDefault();
+      
+          // Перемещаем элемент влево
+          item.style.transform = `translateX(${deltaX}px)`;
+        }
+      });
+
+      item.addEventListener('touchend', function () {
+        if (isSwiping) {
+          // Если пользователь завершил свайп (перетаскивание)
+
+          // Возвращаем элемент в исходное положение
+          item.style.transform = '';
+
+          removeItemFromCartById(product.id);
+          console.log(product.id)
+          console.log(item)
+          
+        }
+      });
+    }
+
+    // Функция для удаления товара из корзины по его идентификатору
+    function removeItemFromCartById(productId) {
+      
+      var index = cart.findIndex(function (item) {
+        return item.id === productId;
+      });
+
+      if (index !== -1) {
+        var removedItem = cart[index];
+        cart.splice(index, 1);
+        updateQuantity(productId, -removedItem.count); // обновляем количество на главной.
+        updateCartPopup(); // Обновляем интерфейс корзины после удаления
+        if (cart.length === 0) {
+          closeCartPopup(); // Закрываем корзину, если она пуста
+        }
+        
+      }
+    }
   
     loadProducts();
   </script>
