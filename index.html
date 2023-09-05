@@ -663,7 +663,7 @@
       var totalAmount = cart.reduce(function (sum, item) {
         return sum + item.price * item.count;
       }, 0);
-      
+      tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
     }
 
     function scrollToTop() {
@@ -684,7 +684,6 @@
     }
     
     function updateCartPopup() {
-      tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
       
       var cartPopupContent = document.querySelector('.cart-popup-content');
       cartPopupContent.innerHTML = ''; // Очищаем содержимое перед заполнением
