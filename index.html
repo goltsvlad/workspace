@@ -778,7 +778,7 @@
           if (Math.abs(currentX) >= itemWidth * 0.9) {
             // Если элемент сдвинулся на 90% от своей ширины или больше,
             // выполняем удаление
-            removeItemFromCartById(product.id);
+            removeItemFromCartById(product.id, itemBlock);
           } else {
             // В противном случае возвращаем элемент на место
             item.style.transition = 'transform 0.3s'; // Добавляем анимацию только для возврата
