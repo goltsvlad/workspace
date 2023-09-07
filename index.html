@@ -846,14 +846,12 @@
 
     // Функция для анимации уменьшения суммы
     function updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount) {
-      // Получаем текущий текст кнопки
-      var currentButtonText = currentTotalAmount;
 
       // Задаем новый текст кнопки (с новой суммой заказа)
-      tg.MainButton.setText(`Підтвердити ${newTotalAmount}₴`);
+      //tg.MainButton.setText(`Підтвердити ${newTotalAmount}₴`);
 
       // Вычисляем разницу между текущей суммой и новой
-      var difference = newTotalAmount - parseInt(currentButtonText);
+      var difference = newTotalAmount - parseInt(currentTotalAmount);
 
       // Количество шагов анимации равно абсолютному значению разницы
       var steps = Math.abs(difference);
@@ -861,7 +859,7 @@
       // Шаг анимации: разницу делим на количество шагов
       var animationStep = difference / steps;
 
-      var currentAmount = parseInt(currentButtonText);
+      var currentAmount = parseInt(currentTotalAmount);
       var stepCount = 0;
 
       // Запускаем анимацию с задержкой между шагами
