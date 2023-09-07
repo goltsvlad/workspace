@@ -744,6 +744,7 @@
 
     // Обработчик касания для элемента товара в корзине
     function addSwipeToDeleteHandler(item, product) {
+      var itemBlock = item;
       var startX;
       var itemWidth = item.offsetWidth;
       var isSwiping = false;
