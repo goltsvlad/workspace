@@ -834,7 +834,7 @@
             return sum + item.price * item.count;
           }, 0);
           //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
-          animateTotalAmount(parseFloat(tg.MainButton.getText().split(' ')[1]), totalAmount);
+          animateTotalAmount(parseFloat(tg.MainButton.text().split(' ')[1]), totalAmount);
           
           updateCartPopup();
 
