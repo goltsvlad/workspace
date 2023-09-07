@@ -793,8 +793,7 @@
     }
 
     // Функция для удаления товара из корзины по его идентификатору
-    function removeItemFromCartById(productId) {
-      
+    function removeItemFromCartById(productId, itemBlock) {
       var index = cart.findIndex(function (item) {
         return item.id === productId;
       });
@@ -802,12 +801,38 @@
       if (index !== -1) {
         var removedItem = cart[index];
         cart.splice(index, 1);
-        updateQuantity(productId, -removedItem.count); // обновляем количество на главной.
-        updateCartPopup(); // Обновляем интерфейс корзины после удаления
-        if (cart.length === 0) {
-          closeCartPopup(); // Закрываем корзину, если она пуста
-        }
-        
+        updateQuantity(productId, -removedItem.count);
+
+        // Задаем анимацию плавного исчезновения элемента
+        itemBlock.style.transition = 'opacity 0.3s ease';
+        itemBlock.style.opacity = 0;
+
+        // Вычисляем высоту элемента корзины и присваиваем ее переменной
+        var fixedItemHeight = itemBlock.offsetHeight;
+
+        // Смещаем все элементы ниже удаляемого элемента вверх
+        var elementsBelow = Array.from(itemBlock.parentNode.children).slice(index + 1);
+        elementsBelow.forEach(function (element) {
+          element.style.transition = 'transform 0.3s ease';
+          element.style.transform = `translateY(-${fixedItemHeight}px)`;
+        });
+
+        setTimeout(function () {
+          // После окончания анимации смещения элементов, удаляем элемент из DOM
+          itemBlock.parentNode.removeChild(itemBlock);
+
+          // Возвращаем элементам исходное местоположение
+          elementsBelow.forEach(function (element) {
+            element.style.transform = '';
+            element.style.transition = '';
+          });
+          
+          updateCartPopup();
+
+          if (cart.length === 0) {
+            closeCartPopup();
+          }
+        }, 300); // Задержка равная времени анимации
       }
     }
   
