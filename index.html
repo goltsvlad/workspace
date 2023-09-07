@@ -833,7 +833,8 @@
           var totalAmount = cart.reduce(function (sum, item) {
             return sum + item.price * item.count;
           }, 0);
-          tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
+          //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
+          animateTotalAmount(parseFloat(tg.MainButton.setText.split(' ')[1]), totalAmount);
           
           updateCartPopup();
 
@@ -842,6 +843,26 @@
           }
         }, 300); // Задержка равная времени анимации
       }
+    }
+
+    // Функция для анимации уменьшения суммы
+    function animateTotalAmount(currentAmount, targetAmount) {
+      var interval = 100; // Интервал анимации в миллисекундах
+      var step = (currentAmount - targetAmount) / (300 / interval); // Рассчитываем шаг изменения суммы
+      var timer;
+
+      // Функция для обновления суммы на кнопке с анимацией
+      function updateAmount() {
+        if (currentAmount > targetAmount) {
+          currentAmount -= step; // Уменьшаем сумму на шаг
+          mainButton.innerText = `Підтвердити ${currentAmount.toFixed(2)}₴`; // Обновляем текст на кнопке
+        } else {
+          clearInterval(timer); // Останавливаем интервал, когда достигнута целевая сумма
+        }
+      }
+
+      // Запускаем интервал анимации
+      timer = setInterval(updateAmount, interval);
     }
   
     loadProducts();
