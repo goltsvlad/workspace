@@ -822,6 +822,8 @@
           element.style.transform = `translateY(-${fixedItemHeight}px)`;
         });
 
+        updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount);
+
         setTimeout(function () {
           // После окончания анимации смещения элементов, удаляем элемент из DOM
           itemBlock.parentNode.removeChild(itemBlock);
@@ -833,7 +835,7 @@
           });
 
           //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
-          updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount);
+          
           
           updateCartPopup();
 
@@ -864,7 +866,7 @@
 
         // Обновляем текст кнопки с текущим значением
         tg.MainButton.setText(`Підтвердити ${Math.round(currentAmount)}₴`);
-      }, 30); // Задержка между шагами (миллисекунды)
+      }, 10); // Задержка между шагами (миллисекунды)
     }
 
     function calculateTotalAmount() {
