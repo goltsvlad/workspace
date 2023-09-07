@@ -847,7 +847,7 @@
     // Функция для анимации уменьшения суммы
     function updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount) {
       // Получаем текущий текст кнопки
-      var currentButtonText = currentTotalAmount
+      var currentButtonText = currentTotalAmount;
 
       // Задаем новый текст кнопки (с новой суммой заказа)
       tg.MainButton.setText(`Підтвердити ${newTotalAmount}₴`);
@@ -855,8 +855,11 @@
       // Вычисляем разницу между текущей суммой и новой
       var difference = newTotalAmount - parseInt(currentButtonText);
 
+      // Количество шагов анимации равно абсолютному значению разницы
+      var steps = Math.abs(difference);
+
       // Шаг анимации: разницу делим на количество шагов
-      var animationStep = difference / 10; // Например, на 10 шагов
+      var animationStep = difference / steps;
 
       var currentAmount = parseInt(currentButtonText);
       var stepCount = 0;
@@ -866,15 +869,15 @@
         currentAmount += animationStep;
         stepCount++;
 
-        // Ограничиваем количество шагов анимации
-        if (stepCount >= 10) {
+        // Останавливаем анимацию, когда достигнута разница
+        if (stepCount >= steps) {
           clearInterval(animationInterval);
           currentAmount = newTotalAmount;
         }
 
         // Обновляем текст кнопки с текущим значением
         tg.MainButton.setText(`Підтвердити ${Math.round(currentAmount)}₴`);
-      }, 100); // Задержка между шагами (100 миллисекунд)
+      }, 300 / steps); // Задержка между шагами (0,3 секунды / количество шагов)
     }
 
     function calculateTotalAmount() {
