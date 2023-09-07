@@ -829,6 +829,11 @@
             element.style.transform = '';
             element.style.transition = '';
           });
+
+          var totalAmount = cart.reduce(function (sum, item) {
+            return sum + item.price * item.count;
+          }, 0);
+          tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
           
           updateCartPopup();
 
