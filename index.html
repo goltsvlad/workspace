@@ -797,6 +797,7 @@
 
     // Функция для удаления товара из корзины по его идентификатору
     function removeItemFromCartById(productId, itemBlock) {
+      var currentTotalAmount = calculateTotalAmount();
       var index = cart.findIndex(function (item) {
         return item.id === productId;
       });
@@ -805,6 +806,7 @@
         var removedItem = cart[index];
         cart.splice(index, 1);
         updateQuantity(productId, -removedItem.count);
+        var newTotalAmount = calculateTotalAmount();
 
         // Задаем анимацию плавного исчезновения элемента
         itemBlock.style.transition = 'opacity 0.3s ease';
@@ -830,11 +832,8 @@
             element.style.transition = '';
           });
 
-          var totalAmount = cart.reduce(function (sum, item) {
-            return sum + item.price * item.count;
-          }, 0);
           //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
-          animateTotalAmount(parseFloat(tg.MainButton.text().split(' ')[1]), totalAmount);
+          updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount);
           
           updateCartPopup();
 
@@ -846,24 +845,42 @@
     }
 
     // Функция для анимации уменьшения суммы
-    function animateTotalAmount(currentAmount, targetAmount) {
-      var step = (currentAmount - targetAmount) / 30; // Рассчитываем шаг изменения суммы
+    function updateCartAndButtonAnimation(currentTotalAmount, newTotalAmount) {
+      // Получаем текущий текст кнопки
+      var currentButtonText = currentTotalAmount
 
-      // Рекурсивная функция для обновления суммы с задержкой
-      function updateAmount() {
-        if (currentAmount > targetAmount) {
-          currentAmount -= step; // Уменьшаем сумму на шаг
-          tg.MainButton.setText(`Підтвердити ${currentAmount.toFixed(2)}₴`); // Обновляем текст на кнопке
+      // Задаем новый текст кнопки (с новой суммой заказа)
+      tg.MainButton.setText(`Підтвердити ${newTotalAmount}₴`);
 
-          if (currentAmount > targetAmount) {
-            // Если не достигнута целевая сумма, продолжаем анимацию
-            setTimeout(updateAmount, 100);
-          }
+      // Вычисляем разницу между текущей суммой и новой
+      var difference = newTotalAmount - parseInt(currentButtonText);
+
+      // Шаг анимации: разницу делим на количество шагов
+      var animationStep = difference / 10; // Например, на 10 шагов
+
+      var currentAmount = parseInt(currentButtonText);
+      var stepCount = 0;
+
+      // Запускаем анимацию с задержкой между шагами
+      var animationInterval = setInterval(function () {
+        currentAmount += animationStep;
+        stepCount++;
+
+        // Ограничиваем количество шагов анимации
+        if (stepCount >= 10) {
+          clearInterval(animationInterval);
+          currentAmount = newTotalAmount;
         }
-      }
 
-      // Начинаем анимацию
-      updateAmount();
+        // Обновляем текст кнопки с текущим значением
+        tg.MainButton.setText(`Підтвердити ${Math.round(currentAmount)}₴`);
+      }, 100); // Задержка между шагами (100 миллисекунд)
+    }
+
+    function calculateTotalAmount() {
+      return cart.reduce(function (sum, item) {
+        return sum + item.price * item.count;
+      }, 0);
     }
   
     loadProducts();
