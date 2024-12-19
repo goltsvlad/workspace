@@ -309,6 +309,7 @@
         flex-direction: column;
         align-items: stretch;
         overflow-y: auto;
+    }
         
         
 
