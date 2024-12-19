@@ -684,7 +684,7 @@
       if (!event.target.closest('.product-list, .description-popup-content, .cart-popup-content')) {
         event.preventDefault();
       }
-    }, { passive: false });
+    }, { passive: true });
 
     
     
