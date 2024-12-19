@@ -393,8 +393,7 @@
   <script>
     var tg = window.Telegram.WebApp;
     
-    // Отключить возможность закрытия окна приложения свайпом
-    tg.disableClosing();
+    
 
     
     tg.expand();
