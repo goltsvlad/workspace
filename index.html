@@ -261,7 +261,7 @@
     
     .close-description-button i {
         line-height: 40px;
-    } /* Разместите кнопки назад и вперед по центру контейнера кнопки */
+    } /* Разместите кнопки по центру контейнера кнопки */
     
     .cart-popup { /* окно корзины */
         position: fixed;
@@ -652,7 +652,7 @@
       startY = event.touches[0].clientY;
     });
     
-    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
+    var minSwipeDistance = 300; // Минимальное расстояние свайпа в пикселях
 
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
