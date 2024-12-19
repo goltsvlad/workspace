@@ -392,8 +392,15 @@
   <!-- <button class="add-to-cart-button" onclick="toggleCartPopup()">В корзину</button>  -->
   <script>
     var tg = window.Telegram.WebApp;
+    
+    // Отключить возможность закрытия окна приложения свайпом
+    tg.disableClosing(); // Инициализация и настройка поведения окна
+    tg.ready(function() { // Убедиться, что окно приложения развернуто
+      tg.expand();
+    });
 
-    tg.expand();
+    
+    // tg.expand();
     tg.MainButton.text = 'Замовити';
     tg.MainButton.color = '#31B545';
     
@@ -649,12 +656,7 @@
     var startX;
     var startY;
     
-    // Отключить возможность закрытия окна приложения свайпом
-    tg.disableClosing(); // Инициализация и настройка поведения окна
-    tg.ready(function() { // Убедиться, что окно приложения развернуто
-      tg.expand();
-    });
-
+    
     descriptionPopupContent.addEventListener('touchstart', function(event) {
       startX = event.touches[0].clientX;
       startY = event.touches[0].clientY;
