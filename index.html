@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+  <!-- Подключение Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
   <script>
     function setThemeClass() {
@@ -510,8 +512,10 @@
         descriptionPopupContent.innerHTML = `
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
-            <div class="prev-product-button" onclick="showProduct('right')">←</div>
-            <div class="next-product-button" onclick="showProduct('left')">→</div>
+           
+           // <div class="prev-product-button" onclick="showProduct('right')">←</div>
+           // <div class="next-product-button" onclick="showProduct('left')">→</div>
+          
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
