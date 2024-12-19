@@ -214,7 +214,7 @@
     .prev-product-button,
     .next-product-button {
         position: absolute;
-        top: 30%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
+        top: 40%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
         font-size: 18px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
@@ -231,16 +231,16 @@
     }
 
     .prev-product-button {
-        left: 0; /* Разместите кнопку "назад" слева от картинки */
+        left: 10px; /* Разместите кнопку "назад" слева от картинки */
     }
     .next-product-button {
-        right: 0; /* Разместите кнопку "вперед" справа от картинки */
-    }
+        right: 10px; /* Разместите кнопку "вперед" справа от картинки */
+    } 
     
     .prev-product-button i,
     .next-product-button i {
         line-height: 40px;
-    }
+    } /* Разместите кнопки назад и вперед по центру контейнера кнопки */
 
 
     .close-description-button {
