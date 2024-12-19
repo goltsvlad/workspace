@@ -247,17 +247,21 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 24px;
+        font-size: 18px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 50%;
         width: 40px;
         height: 40px;
-        opacity: 70%;
+        opacity: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    
+    .close-description-button i {
+        line-height: 40px;
+    } /* Разместите кнопки назад и вперед по центру контейнера кнопки */
     
     .cart-popup { /* окно корзины */
         position: fixed;
