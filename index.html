@@ -309,6 +309,8 @@
         flex-direction: column;
         align-items: stretch;
         overflow-y: auto;
+        height: calc(100vh - 20px);
+        position: relative; /* Положение внутри контейнера */
     }
 
     .cart-item {
@@ -672,9 +674,9 @@
     });
     
     
-    // Деланм тело приложения статичным
+    // Делаем тело приложения статичным
     document.addEventListener('touchmove', function(event) {
-      // Проверяем, что взаимодействие происходит с элементами, которые требуют прокрутки
+      // за исключением следующего контейнера, он остается динамическим:
       if (!event.target.closest('.product-list')) {
         event.preventDefault();
       }
