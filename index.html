@@ -212,7 +212,7 @@
     .prev-product-button,
     .next-product-button {
         position: absolute;
-        top: 25%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
+        top: 30%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
         font-size: 24px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
@@ -510,8 +510,8 @@
         descriptionPopupContent.innerHTML = `
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
-            <div class="prev-product-button" onclick="showProduct('right')">&lt;</div>
-            <div class="next-product-button" onclick="showProduct('left')">&gt;</div>
+            <div class="prev-product-button" onclick="showProduct('right')">→</div>
+            <div class="next-product-button" onclick="showProduct('left')">←</div>
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
