@@ -103,6 +103,7 @@
         flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
         margin-top: 10px; /* Отступ для учета navbar */
         margin: 10px; /* Отступ по краям */
+        overflow: hidden;
     }
 
     .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
