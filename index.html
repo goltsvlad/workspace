@@ -277,6 +277,12 @@
         transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
         transform: translateY(100%); /* Начальное положение за пределами экрана */
     }
+    
+    .cart-popup-content {
+        flex-grow: 1;
+        overflow-y: auto; /* Вертикальная прокрутка внутри окна корзины */
+    }
+    
 
     .cart-popup.show { /* показ окна корзины */
         transform: translateY(0); /* Показать всплывающее окно */
@@ -675,7 +681,7 @@
     
     // Отключить возможность сворачивания при взаимодействии с телом приложения
     document.addEventListener('touchmove', function(event) {
-      if (!event.target.closest('.descriptionPopupContent')) {
+      if (!event.target.closest('.product-list, .description-popup-content, .cart-popup-content')) {
         event.preventDefault();
       }
     }, { passive: false });
