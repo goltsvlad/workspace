@@ -309,9 +309,8 @@
         flex-direction: column;
         align-items: stretch;
         overflow-y: auto;
-        height: calc(100vh - 20px);
-        position: relative; /* Положение внутри контейнера */
-    }
+        
+        
 
     .cart-item {
         display: flex;
