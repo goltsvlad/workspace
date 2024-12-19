@@ -513,10 +513,19 @@
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
             
+            <!-- стрелки на кнопках -->
             <!--
             <div class="prev-product-button" onclick="showProduct('right')">←</div>
             <div class="next-product-button" onclick="showProduct('left')">→</div>
             -->
+            
+            <!-- вместо стрелок  -->
+            <div class="prev-product-button" onclick="showProduct('right')">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="next-product-button" onclick="showProduct('left')">
+              <i class="fas fa-chevron-right"></i>
+            </div>
           
           </div>
           <div class="product-name">${product.name}</div>
