@@ -60,11 +60,11 @@
     }
     
     .animate-out-right {
-        animation: animate-out-right 0.3s ease forwards;
+        animation: animate-out-right 0.5s ease forwards;
     }
     
     .animate-out-left {
-        animation: animate-out-left 0.3s ease forwards;
+        animation: animate-out-left 0.5s ease forwards;
     }
     
     @keyframes animate-on-left {
