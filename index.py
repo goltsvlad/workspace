@@ -103,7 +103,6 @@
         flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на следующую строку */
         margin-top: 10px; /* Отступ для учета navbar */
         margin: 10px; /* Отступ по краям */
-        overflow-y: auto; /* Вертикальная прокрутка */
     }
 
     .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
@@ -277,12 +276,6 @@
         transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
         transform: translateY(100%); /* Начальное положение за пределами экрана */
     }
-    
-    .cart-popup-content {
-        flex-grow: 1;
-        overflow-y: auto; /* Вертикальная прокрутка внутри окна корзины */
-    }
-    
 
     .cart-popup.show { /* показ окна корзины */
         transform: translateY(0); /* Показать всплывающее окно */
@@ -677,16 +670,7 @@
         }
       }
     });
-    
-    
-    // Отключить возможность сворачивания при взаимодействии с телом приложения
-    document.addEventListener('touchmove', function(event) {
-      if (!event.target.closest('.product-list, .description-popup-content, .cart-popup-content')) {
-        event.preventDefault();
-      }
-    }, { passive: true });
 
-    
     
     var cartPopup = document.getElementById('cart-popup');
     var body = document.body;
