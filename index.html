@@ -512,9 +512,11 @@
         descriptionPopupContent.innerHTML = `
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
-           
-           // <div class="prev-product-button" onclick="showProduct('right')">←</div>
-           // <div class="next-product-button" onclick="showProduct('left')">→</div>
+            
+            <!--
+            <div class="prev-product-button" onclick="showProduct('right')">←</div>
+            <div class="next-product-button" onclick="showProduct('left')">→</div>
+            -->
           
           </div>
           <div class="product-name">${product.name}</div>
