@@ -670,6 +670,16 @@
         }
       }
     });
+    
+    
+    // Деланм тело приложения статичным
+    document.addEventListener('touchmove', function(event) {
+      // Проверяем, что взаимодействие происходит с элементами, которые требуют прокрутки
+      if (!event.target.closest('.product-list')) {
+        event.preventDefault();
+      }
+    }, { passive: false });
+
 
     
     var cartPopup = document.getElementById('cart-popup');
