@@ -670,7 +670,16 @@
         }
       }
     });
+    
+    
+    // Отключить возможность сворачивания при взаимодействии с телом приложения
+    document.addEventListener('touchmove', function(event) {
+      if (!event.target.closest('.descriptionPopupContent')) {
+        event.preventDefault();
+      }
+    }, { passive: false });
 
+    
     
     var cartPopup = document.getElementById('cart-popup');
     var body = document.body;
