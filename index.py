@@ -215,7 +215,7 @@
     .next-product-button {
         position: absolute;
         top: 30%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
-        font-size: 24px;
+        font-size: 18px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 30%;
@@ -236,6 +236,12 @@
     .next-product-button {
         right: 0; /* Разместите кнопку "вперед" справа от картинки */
     }
+    
+    .prev-product-button i,
+    .next-product-button i {
+        line-height: 40px;
+    }
+
 
     .close-description-button {
         position: absolute;
