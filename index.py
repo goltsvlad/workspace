@@ -395,9 +395,11 @@
     
     
 
-    
-    tg.expand();
-    tg.MainButton.text = 'Замовити';
+    tg.ready(function() { // Убедиться, что окно приложения развернуто
+      tg.expand();
+    });
+    // tg.expand();
+    tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
