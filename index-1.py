@@ -648,12 +648,6 @@
     //СВАЙПЫ
     var startX;
     var startY;
-    
-    // Отключить возможность закрытия окна приложения свайпом
-    tg.disableClosing(); // Инициализация и настройка поведения окна
-    tg.ready(function() { // Убедиться, что окно приложения развернуто
-      tg.expand();
-    });
 
     descriptionPopupContent.addEventListener('touchstart', function(event) {
       startX = event.touches[0].clientX;
