@@ -247,17 +247,21 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 24px;
+        font-size: 18px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 50%;
         width: 40px;
         height: 40px;
-        opacity: 70%;
+        opacity: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    
+    .close-description-button i {
+        line-height: 40px;
+    } /* Разместите кнопки по центру контейнера кнопки */
     
     .cart-popup { /* окно корзины */
         position: fixed;
@@ -536,7 +540,15 @@
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
+          <!-- X на кнопке закрыть:  -->
+          <!--
           <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
+          -->
+          
+          <!-- вместо X  -->
+          <div class="close-description-button" onclick="closeDescriptionPopup()">
+            <i class="fas fa-times"></i> <!-- Иконка для закрытия -->
+          </div>
         `;
         currentOpenProductIndex = products.findIndex(function(p) {
           return p.id === productId;

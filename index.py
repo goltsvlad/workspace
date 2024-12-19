@@ -60,11 +60,11 @@
     }
     
     .animate-out-right {
-        animation: animate-out-right 0.3s ease forwards;
+        animation: animate-out-right 0.5s ease forwards;
     }
     
     .animate-out-left {
-        animation: animate-out-left 0.3s ease forwards;
+        animation: animate-out-left 0.5s ease forwards;
     }
     
     @keyframes animate-on-left {
@@ -652,7 +652,7 @@
       startY = event.touches[0].clientY;
     });
     
-    var minSwipeDistance = 300; // Минимальное расстояние свайпа в пикселях
+    var minSwipeDistance = 80; // Минимальное расстояние свайпа в пикселях
 
     descriptionPopupContent.addEventListener('touchmove', function(event) {
       var deltaX = event.touches[0].clientX - startX;
