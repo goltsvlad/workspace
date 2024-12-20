@@ -159,6 +159,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        opacity: 80%;
     }
 
     .quantity-buttons { /* контейнер с кнопками товара */
@@ -174,7 +175,6 @@
         font-weight: 500; /* regular */
         font-style: normal;
         font-size: 14px;
-        opacity: 50%;
         color: white;
         border: none;
         padding: 10px;
@@ -232,6 +232,7 @@
         padding: 20px;
         text-align: center;
         overflow: hidden;
+        background-color: var(--tg-theme-secondary-bg-color);
     }
 
     .product-image-container {
