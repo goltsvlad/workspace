@@ -396,7 +396,7 @@
     // Отключить возможность закрытия окна приложения свайпом
     
     tg.expand();
-    tg.isFullscreen = True
+    tg.isExpanded = True
     tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
