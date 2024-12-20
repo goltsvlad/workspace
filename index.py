@@ -396,7 +396,7 @@
     
     tg.disableVerticalSwipes() //отключить вертикальные свайпы webapp
     tg.expand(); // растянуть webapp
-    tg.MainButton.text = 'Замовити';
+    tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
@@ -863,6 +863,7 @@
         
         // Сохраняем текущее положение прокрутки
         var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        var container = itemBlock.closest('.container-class'); // Найдите ближайший контейнер
 
         // Задаем анимацию плавного исчезновения элемента
         itemBlock.style.transition = 'opacity 0.3s ease';
@@ -891,7 +892,7 @@
           });
           
           // Восстанавливаем положение прокрутки
-          window.scrollTo(0, scrollPosition);
+          container.scrollTo(0, scrollPosition);
 
           //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
           
