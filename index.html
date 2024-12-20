@@ -174,8 +174,9 @@
         background-color: #F8A917;
         color: white;
         border: none;
-        font-size: 12px;
-        font-weight: 500;
+        font-family: "Roboto", serif;
+        font-weight: 600; /* regular */
+        font-style: normal;
         padding: 10px;
         cursor: pointer;
         width: 100%;
