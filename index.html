@@ -396,7 +396,8 @@
     // Отключить возможность закрытия окна приложения свайпом
     
     tg.expand();
-    tg.MainButton.text = 'Замовити';
+    tg.isFullscreen = True
+    tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
