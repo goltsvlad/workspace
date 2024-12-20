@@ -10,14 +10,12 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="robots" content="noindex,nofollow" />
   
-  <!-- light, regular, medium, semibold, bold  шрифт ROBOTO Flex-->
+  <!-- light, regular, medium, semibold, bold  шрифт ROBOTO -->
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   
   <!-- шрифт Dela Gothic-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
   
   <!-- Подключение Font Awesome -->
@@ -32,8 +30,9 @@
   </script>
   <style>
     body {
-      font-family: 'Dela Gothic One', sans-serif;
+      font-family: "Roboto", serif;
       font-weight: 400; /* regular */
+      font-style: normal;
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
       font-size: 12px;
