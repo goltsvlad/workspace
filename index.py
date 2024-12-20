@@ -216,7 +216,7 @@
         padding: 20px;
         text-align: center;
         /*overflow: hidden;*/
-        background-color: blue;
+        background-color: var(--tg-theme-bg-color);
         
     }
 
