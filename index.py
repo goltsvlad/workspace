@@ -230,6 +230,7 @@
         color: #333; /* Цвет текста */
         line-height: 1.5; /* Межстрочное расстояние */
         margin-top: 10px;
+        padding: 5px;
         width: 100%;
         border-radius: 10px;
     }
