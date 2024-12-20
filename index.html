@@ -396,7 +396,7 @@
     
     tg.disableVerticalSwipes() //отключить вертикальные свайпы webapp
     tg.expand(); // растянуть webapp
-    tg.MainButton.text = 'Замовити5';
+    tg.MainButton.text = 'Замовити';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
@@ -798,8 +798,8 @@
       item.addEventListener('touchmove', function (event) {
         var deltaX = event.touches[0].clientX - startX;
     
-        // Если перемещение происходит влево
-        if (deltaX < 0) {
+        // Если перемещение происходит влево и касание началось у правого края блока 
+        if (deltaX < 0 && startX >= itemWidth * 0.8) {
           isSwiping = true;
       
           // Отменяем стандартное поведение браузера
@@ -818,7 +818,7 @@
           // Проверяем, насколько далеко сдвинулся элемент
           var currentX = parseInt(getComputedStyle(item).transform.split(',')[4]);
 
-          if (Math.abs(currentX) >= itemWidth * 0.95) {
+          if (Math.abs(currentX) >= itemWidth * 0.9) {
             // Если элемент сдвинулся на 90% от своей ширины или больше,
             // выполняем удаление
             removeItemFromCartById(product.id, itemBlock);
