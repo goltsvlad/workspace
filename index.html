@@ -229,7 +229,7 @@
         color: #333; /* Цвет текста */
         line-height: 1.5; /* Межстрочное расстояние */
         margin-top: 10px;
-        border-radius: 30%;
+        border-radius: 5%;
     }
     
     .product-description p { 
