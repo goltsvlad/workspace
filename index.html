@@ -393,10 +393,10 @@
   <script>
     var tg = window.Telegram.WebApp;
     
-    // Отключить возможность закрытия окна приложения свайпом
+    
     
     tg.expand();
-    tg.isExpanded = True
+    
     tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
