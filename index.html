@@ -35,7 +35,7 @@
       font-style: normal;
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
-      font-size: 12px;
+      font-size: 14px;
       margin: 0;
       padding: 0;
       color-scheme: var(--tg-color-scheme);
