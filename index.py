@@ -125,21 +125,6 @@
 
     .product-name { /* название товара */
         margin-top: 5px;
-        
-        background-color: #F8A917;
-        color: white;
-        border: none;
-        font-family: "Roboto", serif;
-        font-weight: 500; /* regular */
-        font-style: normal;
-        font-size: 14px;
-        padding: 10px;
-        cursor: pointer;
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-        border-radius: 10px;
-        text-align: center;
     }
 
     .product-price { /* цена товара */
@@ -159,7 +144,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 80%;
+        opacity: 65%;
     }
 
     .quantity-buttons { /* контейнер с кнопками товара */
@@ -237,6 +222,17 @@
 
     .product-image-container {
         position: relative;
+    }
+    
+    .product-description {
+        font-size: 16px;
+        color: #333; /* Цвет текста */
+        line-height: 1.5; /* Межстрочное расстояние */
+        margin-top: 10px;
+    }
+    
+    .product-description p { 
+        margin: 0 0 10px; /* Отступ между параграфами */
     }
 
     .prev-product-button,
@@ -571,13 +567,8 @@
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
             
-            <!-- стрелки на кнопках -->
-            <!--
-            <div class="prev-product-button" onclick="showProduct('right')">←</div>
-            <div class="next-product-button" onclick="showProduct('left')">→</div>
-            -->
             
-            <!-- вместо стрелок  -->
+            <!-- иконки на кнопках  -->
             <div class="prev-product-button" onclick="showProduct('right')">
               <i class="fas fa-chevron-left"></i>
             </div>
