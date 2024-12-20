@@ -201,7 +201,7 @@
         flex-direction: column;
         width: 100%;
         height: 100%; /* Здесь используется 100vh для высоты экрана */
-        overflow: hidden;
+        /*overflow: hidden;*/
         transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
         transform: translateY(100%);
     }
