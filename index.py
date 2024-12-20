@@ -9,10 +9,17 @@
   <meta name="MobileOptimized" content="176" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="robots" content="noindex,nofollow" />
-  <!-- light, regular, medium, semibold, bold  -->
+  
+  <!-- light, regular, medium, semibold, bold  шрифт ROBOTO Flex-->
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+  
+  <!-- шрифт Dela Gothic-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  
   <!-- Подключение Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
@@ -25,7 +32,7 @@
   </script>
   <style>
     body {
-      font-family: 'Roboto Flex', sans-serif;
+      font-family: 'Dela Gothic One', sans-serif;
       font-weight: 400; /* regular */
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
