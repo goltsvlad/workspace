@@ -394,9 +394,9 @@
     var tg = window.Telegram.WebApp;
     
     
-    tg.disableVerticalSwipes()
-    tg.expand();
-    tg.MainButton.text = 'Замовити';
+    tg.disableVerticalSwipes() //отключить вертикальные свайпы webapp
+    tg.expand(); // растянуть webapp
+    tg.MainButton.text = 'Замовити5';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
@@ -677,14 +677,7 @@
     });
     
     
-    // Делаем тело приложения статичным
-    document.addEventListener('touchmove', function(event) {
-      // за исключением следующего контейнера, он остается динамическим:
-      if (!event.target.closest('.product-list')) {
-        event.preventDefault();
-      }
-    }, { passive: false });
-
+    
 
     
     var cartPopup = document.getElementById('cart-popup');

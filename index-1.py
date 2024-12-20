@@ -392,8 +392,10 @@
   <!-- <button class="add-to-cart-button" onclick="toggleCartPopup()">В корзину</button>  -->
   <script>
     var tg = window.Telegram.WebApp;
-
-    tg.expand();
+    
+    
+    tg.disableVerticalSwipes() //отключить вертикальные свайпы webapp
+    tg.expand(); // растянуть webapp
     tg.MainButton.text = 'Замовити';
     tg.MainButton.color = '#31B545';
     
@@ -648,7 +650,8 @@
     //СВАЙПЫ
     var startX;
     var startY;
-
+    
+    
     descriptionPopupContent.addEventListener('touchstart', function(event) {
       startX = event.touches[0].clientX;
       startY = event.touches[0].clientY;
