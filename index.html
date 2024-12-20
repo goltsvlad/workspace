@@ -579,12 +579,9 @@
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
-          <!-- X на кнопке закрыть:  -->
-          <!--
-          <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
-          -->
           
-          <!-- вместо X  -->
+          
+          <!-- задан стиль для кнопки закрыть.  -->
           <div class="close-description-button" onclick="closeDescriptionPopup()">
             <i class="fas fa-times"></i> <!-- Иконка для закрытия -->
           </div>
