@@ -860,6 +860,9 @@
         cart.splice(index, 1);
         updateQuantity(productId, -removedItem.count);
         var newTotalAmount = calculateTotalAmount();
+        
+        // Сохраняем текущее положение прокрутки
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
         // Задаем анимацию плавного исчезновения элемента
         itemBlock.style.transition = 'opacity 0.3s ease';
@@ -886,6 +889,9 @@
             element.style.transform = '';
             element.style.transition = '';
           });
+          
+          // Восстанавливаем положение прокрутки
+          window.scrollTo(0, scrollPosition);
 
           //tg.MainButton.setText(`Підтвердити ${totalAmount}₴`);
           

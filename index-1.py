@@ -766,6 +766,18 @@
       cartPopupContent.appendChild(commentBlock);
       
       var commentInput = document.querySelector('.comment-input');
+      
+      // Обработчик события для скрытия клавиатуры
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.comment-input')) {
+          commentInput.blur(); // Убирает фокус с текстового поля, скрывая клавиатуру
+        }
+      });
+      
+      // Предотвращение распространения события click внутри comment-input
+      commentInput.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
 
       commentInput.addEventListener('input', function () {
         this.style.height = 'auto'; // Сначала сбросим высоту
