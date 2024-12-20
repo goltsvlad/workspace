@@ -226,11 +226,11 @@
     
     .product-description {
         background-color: var(--tg-theme-secondary-bg-color);
-        font-size: 16px;
+        font-size: 14px;
         color: #333; /* Цвет текста */
         line-height: 1.5; /* Межстрочное расстояние */
         margin-top: 10px;
-        padding: 10px;
+        margin: 10px;
         width: 100%;
         border-radius: 10px;
     }
