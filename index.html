@@ -33,9 +33,9 @@
       font-family: "Roboto", serif;
       font-weight: 500; /* regular */
       font-style: normal;
+      font-size: 14px;
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
-      font-size: 14px;
       margin: 0;
       padding: 0;
       color-scheme: var(--tg-color-scheme);
@@ -155,7 +155,10 @@
 
     .quantity-button { /* кнопки + и - */
         background-color: #F8A917;
-        font-weight: 700;
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
+        font-size: 14px;
         color: white;
         border: none;
         padding: 10px;
@@ -177,6 +180,7 @@
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
         font-style: normal;
+        font-size: 14px;
         padding: 10px;
         cursor: pointer;
         width: 100%;
@@ -222,6 +226,9 @@
     .next-product-button {
         position: absolute;
         top: 40%; /* Разместите по вертикали в центре контейнера  тогда top: 50%*/
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
         font-size: 18px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
@@ -254,7 +261,10 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 18px;
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
+        font-size: 14px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 50%;
@@ -298,13 +308,18 @@
     }
 
     .cart-popup-title { /* текст заголовка окна корзины */
-        font-size: 18px;
-        font-weight: 600; /* Устанавливаем полужирное начертание (SemiBold) */
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
+        font-size: 14px;
         color: var(--tg-theme-text-color);
         
     }
 
     .edit-button { /* кликабельное слово в заголовке окна корзины */
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
         font-size: 16px;
         color: #31B545;
         cursor: pointer;
@@ -344,11 +359,10 @@
 
     .cart-item-name {
         color: var(--tg-theme-text-color);
-        font-weight: 500;
+        
     }
 
     .cart-item-count {
-        font-weight: 600;
         color: #F8A917; /* Зелёный цвет для количества */
         margin-left: 10px;
     }
@@ -369,6 +383,9 @@
         padding: 10px 20px;
         border: none;
         outline: none;
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
         font-size: 16px;
         resize: none;
         overflow: hidden; /* Предотвращаем появление полос прокрутки */
@@ -378,7 +395,10 @@
 
     .comment-helper-text {
         color: var(--tg-theme-hint-color); /* Серый цвет текста */
-        font-size: 14px; /* Размер шрифта */
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
+        font-size: 14px;
         margin-top: 5px; /* Отступ от поля ввода */
         margin-left: 20px;
     }
