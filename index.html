@@ -221,6 +221,7 @@
 
     .product-image-container {
         position: relative;
+        background-color: var(--tg-theme-bg-color);
     }
     
     .product-description {
