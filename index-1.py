@@ -144,7 +144,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 65%;
     }
 
     .quantity-buttons { /* контейнер с кнопками товара */
@@ -160,6 +159,7 @@
         font-weight: 500; /* regular */
         font-style: normal;
         font-size: 14px;
+        opacity: 50%;
         color: white;
         border: none;
         padding: 10px;
@@ -217,22 +217,10 @@
         padding: 20px;
         text-align: center;
         overflow: hidden;
-        background-color: var(--tg-theme-secondary-bg-color);
     }
 
     .product-image-container {
         position: relative;
-    }
-    
-    .product-description {
-        font-size: 16px;
-        color: #333; /* Цвет текста */
-        line-height: 1.5; /* Межстрочное расстояние */
-        margin-top: 10px;
-    }
-    
-    .product-description p { 
-        margin: 0 0 10px; /* Отступ между параграфами */
     }
 
     .prev-product-button,
@@ -567,8 +555,13 @@
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
             
+            <!-- стрелки на кнопках -->
+            <!--
+            <div class="prev-product-button" onclick="showProduct('right')">←</div>
+            <div class="next-product-button" onclick="showProduct('left')">→</div>
+            -->
             
-            <!-- иконки на кнопках  -->
+            <!-- вместо стрелок  -->
             <div class="prev-product-button" onclick="showProduct('right')">
               <i class="fas fa-chevron-left"></i>
             </div>
