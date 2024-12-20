@@ -31,7 +31,7 @@
   <style>
     body {
       font-family: "Roboto", serif;
-      font-weight: 400; /* regular */
+      font-weight: 600; /* regular */
       font-style: normal;
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
