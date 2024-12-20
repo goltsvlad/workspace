@@ -31,7 +31,7 @@
   <style>
     body {
       font-family: "Roboto", serif;
-      font-weight: 600; /* regular */
+      font-weight: 500; /* regular */
       font-style: normal;
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
@@ -175,7 +175,7 @@
         color: white;
         border: none;
         font-family: "Roboto", serif;
-        font-weight: 600; /* regular */
+        font-weight: 500; /* regular */
         font-style: normal;
         padding: 10px;
         cursor: pointer;
