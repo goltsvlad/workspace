@@ -134,7 +134,7 @@
 
     .count-badge { /* значок количества на картинке */
         position: absolute;
-        color: white;
+        color: var(--tg-theme-text-color);
         top: 10px;
         right: 10px;
         background-color: #F8A917;
@@ -160,7 +160,7 @@
         font-weight: 500; /* regular */
         font-style: normal;
         font-size: 14px;
-        color: white;
+        color: var(--tg-theme-text-color);
         border: none;
         padding: 10px;
         cursor: pointer;
@@ -176,7 +176,7 @@
 
     .add-to-cart-button { /* кнопка В КОРЗИНУ */
         background-color: #F8A917;
-        color: white;
+        color: var(--tg-theme-text-color);
         border: none;
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
@@ -221,11 +221,10 @@
 
     .product-image-container {
         position: relative;
-        background-color: var(--tg-theme-bg-color);
     }
     
     .product-description {
-        background-color: red;
+        background-color: var(--tg-theme-secondary-bg-color);
         font-size: 16px;
         color: #333; /* Цвет текста */
         line-height: 1.5; /* Межстрочное расстояние */
@@ -351,7 +350,7 @@
 
     .cart-item {
         display: flex;
-        color: white;
+        color: var(--tg-theme-text-color);
         background-color: var(--tg-theme-bg-color);
         align-items: center;
         padding: 10px 20px;
