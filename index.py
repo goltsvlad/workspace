@@ -36,7 +36,7 @@
       font-weight: 400; /* regular */
       background-color: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
-      font-size: 14px;
+      font-size: 12px;
       margin: 0;
       padding: 0;
       color-scheme: var(--tg-color-scheme);
