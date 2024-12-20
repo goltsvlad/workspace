@@ -394,10 +394,9 @@
     var tg = window.Telegram.WebApp;
     
     
-    
+    tg.disableVerticalSwipes()
     tg.expand();
-    
-    tg.MainButton.text = 'Замовити5';
+    tg.MainButton.text = 'Замовити';
     tg.MainButton.color = '#31B545';
     
     Telegram.WebApp.onEvent('mainButtonClicked', function() {
