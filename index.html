@@ -125,6 +125,21 @@
 
     .product-name { /* название товара */
         margin-top: 5px;
+        
+        background-color: #F8A917;
+        color: white;
+        border: none;
+        font-family: "Roboto", serif;
+        font-weight: 500; /* regular */
+        font-style: normal;
+        font-size: 14px;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+        text-align: center;
     }
 
     .product-price { /* цена товара */
@@ -159,6 +174,7 @@
         font-weight: 500; /* regular */
         font-style: normal;
         font-size: 14px;
+        opacity: 50%;
         color: white;
         border: none;
         padding: 10px;
