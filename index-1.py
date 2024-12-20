@@ -212,11 +212,12 @@
 
 
     .description-popup-content {
-        align-items: center; /* Центрируем контент по вертикали */
+        align-items: center; /*Центрируем контент по вертикали */
         padding: 20px;
         text-align: center;
-        overflow: hidden;
-        background-color: blue;
+        /*overflow: hidden;*/
+        background-color: var(--tg-theme-bg-color);
+        
     }
 
     .product-image-container {
