@@ -180,7 +180,7 @@
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
         font-style: normal;
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px;
         cursor: pointer;
         width: 100%;
@@ -264,7 +264,7 @@
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
         font-style: normal;
-        font-size: 14px;
+        font-size: 16px;
         cursor: pointer;
         background-color: var(--tg-theme-secondary-bg-color);
         border-radius: 50%;
@@ -311,7 +311,7 @@
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
         font-style: normal;
-        font-size: 14px;
+        font-size: 16px;
         color: var(--tg-theme-text-color);
         
     }
@@ -384,9 +384,9 @@
         border: none;
         outline: none;
         font-family: "Roboto", serif;
-        font-weight: 500; /* regular */
+        font-weight: 400; /* regular */
         font-style: normal;
-        font-size: 16px;
+        font-size: 14px;
         resize: none;
         overflow: hidden; /* Предотвращаем появление полос прокрутки */
         box-sizing: border-box;
