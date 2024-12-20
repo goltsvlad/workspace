@@ -134,7 +134,7 @@
 
     .count-badge { /* значок количества на картинке */
         position: absolute;
-        color: white;
+        color: var(--tg-theme-text-color);
         top: 10px;
         right: 10px;
         background-color: #F8A917;
@@ -144,6 +144,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        opacity: 65%;
     }
 
     .quantity-buttons { /* контейнер с кнопками товара */
@@ -159,8 +160,7 @@
         font-weight: 500; /* regular */
         font-style: normal;
         font-size: 14px;
-        opacity: 50%;
-        color: white;
+        color: var(--tg-theme-text-color);
         border: none;
         padding: 10px;
         cursor: pointer;
@@ -176,7 +176,7 @@
 
     .add-to-cart-button { /* кнопка В КОРЗИНУ */
         background-color: #F8A917;
-        color: white;
+        color: var(--tg-theme-text-color);
         border: none;
         font-family: "Roboto", serif;
         font-weight: 500; /* regular */
@@ -193,7 +193,6 @@
 
     /* Стили для всплывающего окна description */
     .description-popup {
-        background-color: var(--tg-theme-bg-color);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -202,7 +201,7 @@
         flex-direction: column;
         width: 100%;
         height: 100%; /* Здесь используется 100vh для высоты экрана */
-        overflow: hidden;
+        /*overflow: hidden;*/
         transition: transform 0.3s; /* Мы используем transform для анимации появления/скрытия */
         transform: translateY(100%);
     }
@@ -217,10 +216,25 @@
         padding: 20px;
         text-align: center;
         overflow: hidden;
+        background-color: blue;
     }
 
     .product-image-container {
         position: relative;
+    }
+    
+    .product-description {
+        background-color: var(--tg-theme-secondary-bg-color);
+        font-size: 16px;
+        color: #333; /* Цвет текста */
+        line-height: 1.5; /* Межстрочное расстояние */
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .product-description p { 
+        margin: 0 0 10px; /* Отступ между параграфами */
     }
 
     .prev-product-button,
@@ -338,7 +352,7 @@
 
     .cart-item {
         display: flex;
-        color: white;
+        color: var(--tg-theme-text-color);
         background-color: var(--tg-theme-bg-color);
         align-items: center;
         padding: 10px 20px;
@@ -555,13 +569,8 @@
           <div class="product-image-container">
             <img class="product-image" src="${product.image}" alt="${product.name}">
             
-            <!-- стрелки на кнопках -->
-            <!--
-            <div class="prev-product-button" onclick="showProduct('right')">←</div>
-            <div class="next-product-button" onclick="showProduct('left')">→</div>
-            -->
             
-            <!-- вместо стрелок  -->
+            <!-- иконки на кнопках  -->
             <div class="prev-product-button" onclick="showProduct('right')">
               <i class="fas fa-chevron-left"></i>
             </div>
@@ -572,12 +581,9 @@
           </div>
           <div class="product-name">${product.name}</div>
           <div class="product-description">${product.description}</div>
-          <!-- X на кнопке закрыть:  -->
-          <!--
-          <div class="close-description-button" onclick="closeDescriptionPopup()">X</div>
-          -->
           
-          <!-- вместо X  -->
+          
+          <!-- задан стиль для кнопки закрыть.  -->
           <div class="close-description-button" onclick="closeDescriptionPopup()">
             <i class="fas fa-times"></i> <!-- Иконка для закрытия -->
           </div>
