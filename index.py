@@ -111,7 +111,7 @@
         margin: 10px; /* Отступ по краям */
     }
 
-    .product { /* контейнер товара в главном контейнере состоящийииз product-image, product-name, product-price, quantity-buttons. */
+    .product { /* контейнер товара в главном контейнере состоящий из product-image, product-name, product-price, quantity-buttons. */
         width: calc(33.33% - 10px);
         margin: 5px;
         text-align: center;
@@ -213,6 +213,8 @@
 
     .description-popup-content {
         align-items: center; /*Центрируем контент по вертикали */
+        margin-top: 10px; /* Отступ для учета navbar */
+        margin: 10px; /* Отступ по краям */
         padding: 20px;
         text-align: center;
         /*overflow: hidden;*/
@@ -272,6 +274,7 @@
     .prev-product-button i,
     .next-product-button i {
         line-height: 40px;
+        margin-top: 
     } /* Разместите кнопки назад и вперед по центру контейнера кнопки */
 
 
