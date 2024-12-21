@@ -229,7 +229,7 @@
     .product-description {
         background-color: var(--tg-theme-secondary-bg-color);
         font-size: 14px;
-        color: #333; /* Цвет текста */
+        color: var(--tg-theme-text-color); /* Цвет текста */
         line-height: 1.5; /* Межстрочное расстояние */
         margin-top: 10px;
         padding: 10px;
